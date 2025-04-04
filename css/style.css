@@ -1,0 +1,21 @@
+
+.text-wrap {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-float {
+    animation: floatUp 0.5s ease-in-out;
+}

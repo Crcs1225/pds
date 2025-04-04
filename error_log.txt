@@ -1,0 +1,30 @@
+[04-Apr-2025 05:21:15 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '' for key 'email' in C:\xampp\htdocs\pds\personalInfo.php:115
+Stack trace:
+#0 C:\xampp\htdocs\pds\personalInfo.php(115): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\personalInfo.php on line 115
+[04-Apr-2025 05:23:51 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '' for key 'email' in C:\xampp\htdocs\pds\personalInfo.php:115
+Stack trace:
+#0 C:\xampp\htdocs\pds\personalInfo.php(115): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\personalInfo.php on line 115
+[04-Apr-2025 05:29:50 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '' for key 'email' in C:\xampp\htdocs\pds\personalInfo.php:115
+Stack trace:
+#0 C:\xampp\htdocs\pds\personalInfo.php(115): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\personalInfo.php on line 115
+[04-Apr-2025 07:33:17 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '' for key 'cs_id_no' in C:\xampp\htdocs\pds\personalInfo.php:115
+Stack trace:
+#0 C:\xampp\htdocs\pds\personalInfo.php(115): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\personalInfo.php on line 115
+[04-Apr-2025 07:34:03 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '' for key 'cs_id_no' in C:\xampp\htdocs\pds\personalInfo.php:115
+Stack trace:
+#0 C:\xampp\htdocs\pds\personalInfo.php(115): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\personalInfo.php on line 115
+[04-Apr-2025 07:34:42 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '' for key 'cs_id_no' in C:\xampp\htdocs\pds\personalInfo.php:115
+Stack trace:
+#0 C:\xampp\htdocs\pds\personalInfo.php(115): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\personalInfo.php on line 115
