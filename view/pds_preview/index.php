@@ -127,6 +127,14 @@ try {
     $attachmentResult = $stmtAttachment->get_result();
     $attachment = $attachmentResult->fetch_assoc();
 
+    $basePath = $_SERVER['DOCUMENT_ROOT']; // gives you C:/xampp/htdocs
+    $relativePath = '/pds/view_model/pds_main/'; // where the uploads actually live
+    
+    $id_picture = $basePath . $relativePath . $attachment['id_picture'];
+    $signature = $basePath . $relativePath . $attachment['person_signature'];
+    $administering = $basePath . $relativePath . $attachment['signature_of_person_administering_oath'];
+
+
     // Path to your PDF template
     $templatePath = 'pds.pdf';
 
@@ -317,14 +325,14 @@ try {
                 $y = 283; // Starting Y position
                 $pdf->SetX(42);
                 foreach ($educationalBackground as $education) {
-                    $pdf->SetXY(42, $y); // Set X and dynamic Y position
+                    $pdf->SetXY(40, $y); // Set X and dynamic Y position
                     $pdf->Cell(0, 7, $education['name_of_school'], 0, 1, 'L'); // Print name
                     $y += 8; // Move Y position down for the next child
                 }
                 $y = 283; // Starting Y position
                 $pdf->SetX(92);
                 foreach ($educationalBackground as $education) {
-                    $pdf->SetXY(92, $y); // Set X and dynamic Y position
+                    $pdf->SetXY(90, $y); // Set X and dynamic Y position
                     $pdf->Cell(0, 7, $education['basic_education_degree_course'], 0, 1, 'L'); // Print name
                     $y += 8; // Move Y position down for the next child
                 }
@@ -415,16 +423,18 @@ try {
             
            }
            if ($workExperience){
-            $y = 115; // Starting Y position
+            $y = 116; // Starting Y position
             $pdf->SetX(4);
             foreach ($workExperience as $work) {
+                $pdf->SetFont('Arial', '', 8);
                 $pdf->SetXY(4, $y); // Set X and dynamic Y position
                 $pdf->Cell(0, 7, $work['work_from'], 0, 1, 'L'); // Print name
                 $y += 8.5; // Move Y position down for the next child
             }
-            $y = 115; // Starting Y position
+            $y = 116; // Starting Y position
             $pdf->SetX(21);
             foreach ($workExperience as $work) {
+                $pdf->SetFont('Arial', '', 8);
                 $pdf->SetXY(21, $y); // Set X and dynamic Y position
                 $pdf->Cell(0, 7, $work['work_to'], 0, 1, 'L'); // Print name
                 $y += 8.5; // Move Y position down for the next child
@@ -780,6 +790,9 @@ try {
             }
 
             if ($attachment){
+                $pdf->Image($id_picture, 173, 210, 30, 30);
+                $pdf->Image($signature, 110, 265, 20, 20);
+                $pdf->Image($administering, 110, 310, 20, 20);
                 $pdf->SetXY(32, 275);
                 $pdf->Write(0, $attachment['government_issued_id']);
                 $pdf->SetXY(35, 282);
@@ -877,6 +890,6 @@ try {
         <button onclick="submitAction('cancel')" class="cancel-btn">Cancel</button>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="/pds/js/pds_preview/script.js"></script>
 </body>
 </html>

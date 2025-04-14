@@ -283,3 +283,92 @@ Raw input:
  No file uploaded for key: C4_Signature
  No file uploaded for key: Sworn_Sig
  One or more file uploads failed. Aborting database insert.
+Raw input:
+{"cs_id_no":"","Surname":"fdsfd","Firstname":"dsfdsf","NameExtension":"jr","MiddleName":"dsfds","DateOfBirth":"2002-12-12","PlaceOfBirth":"dfdgg","Height":"","Weight":"","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"Australia","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"","ResCity_Municipality":"","ResProvince":"","ResZipCode":"","PerHouse_Block_LotNo":"","PerStreet":"","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"","PerProvince":"","PerZipCode":"","TelephoneNumber":"","MobileNumber":"09","EmailAdd":"","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth"}
+Raw input:
+{"personal_info_id":62,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"","Father_Firstname":"","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"","Mother_Firstname":"","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":62,"elemName":"","elemBasicEduc":"","elemFrom":"","elemTo":"","elemUnits":"","elemYrGrad":"","elemHonors":"","level":"Elementary"},{"personal_info_id":62,"secondName":"","secondBasicEduc":"","secondFrom":"","secondTo":"","secondUnits":"","secondYrGrad":"","secondHonors":"","level":"Secondary"},{"personal_info_id":62,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":62,"colName":"","colCourse":"","colFrom":"","colTo":"","colUnits":"","colYrGrad":"","colHonors":"","level":"College"},{"personal_info_id":62,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":62,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":62,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ Received Files: Array
+(
+)
+
+ No file uploaded for key: C4_Picture
+ No file uploaded for key: C4_Signature
+ No file uploaded for key: Sworn_Sig
+ One or more file uploads failed. Aborting database insert.
+Raw input:
+{"cs_id_no":"","Surname":"fdsfd","Firstname":"dsfdsf","NameExtension":"jr","MiddleName":"dsfds","DateOfBirth":"2002-12-12","PlaceOfBirth":"dfdgg","Height":"","Weight":"","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"Australia","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"","ResCity_Municipality":"","ResProvince":"","ResZipCode":"","PerHouse_Block_LotNo":"","PerStreet":"","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"","PerProvince":"","PerZipCode":"","TelephoneNumber":"","MobileNumber":"0939","EmailAdd":"","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth"}
+Raw input:
+{"personal_info_id":63,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"","Father_Firstname":"","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"","Mother_Firstname":"","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":63,"elemName":"","elemBasicEduc":"","elemFrom":"","elemTo":"","elemUnits":"","elemYrGrad":"","elemHonors":"","level":"Elementary"},{"personal_info_id":63,"secondName":"","secondBasicEduc":"","secondFrom":"","secondTo":"","secondUnits":"","secondYrGrad":"","secondHonors":"","level":"Secondary"},{"personal_info_id":63,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":63,"colName":"","colCourse":"","colFrom":"","colTo":"","colUnits":"","colYrGrad":"","colHonors":"","level":"College"},{"personal_info_id":63,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":63,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":63,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ Received Files: Array
+(
+)
+
+ No file uploaded for key: C4_Picture
+ No file uploaded for key: C4_Signature
+ No file uploaded for key: Sworn_Sig
+ One or more file uploads failed. Aborting database insert.
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2002-12-25","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"","PerProvince":"","PerZipCode":"","TelephoneNumber":"","MobileNumber":"09380013909","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth"}
+Raw input:
+{"personal_info_id":64,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Caracas","Father_Firstname":"Edwin","Father_NameExtension":"","Father_Middlename":"Casta","Mother_MaidenName":"","Mother_Surname":"Awisan","Mother_Firstname":"Trudz","Mother_Middlename":"Agnawa","":"ADD"}
+Raw input:
+{"hobbies":[{"id":1744591452436,"value":"coding","personal_info_id":64}]}
+Raw input:
+{"work_experience":[{"id":1744591385178,"workFrom":"2020-01-01","workTo":"2025-01-01","positionTitle":"Any","department":"Company X","monthlySalary":"15000","salaryGrade":"14","statusAppointment":"any","govService":"No","personal_info_id":64}]}
+Raw input:
+{"education":[{"personal_info_id":64,"elemName":"Pilar Elementary School","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":64,"secondName":"Bolinao Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":64,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":64,"colName":"Pangasinan State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":64,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"membership":[{"id":1744591485815,"value":"org x","personal_info_id":64}]}
+Raw input:
+{"question":[{"personal_info_id":64,"question_code":1,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":2,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":3,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":4,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":5,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":6,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":7,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":8,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":9,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":10,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":11,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":64,"question_code":12,"answer":"No","details":"N/A","date_filed":"N/A"}]}
+Raw input:
+{"reference":[{"name":"person 1","address":"person_1@geemail.com","phone":"09654623341","personal_info_id":64}]}
+ Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => hero-image.png
+            [full_path] => hero-image.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpBFE8.tmp
+            [error] => 0
+            [size] => 130358
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpBFE9.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC009.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ Attempting to move file: C:\xampp\tmp\phpBFE8.tmp to upload/id/user64.png
+ File moved successfully: upload/id/user64.png
+ Attempting to move file: C:\xampp\tmp\phpBFE9.tmp to upload/signature/user64.png
+ File moved successfully: upload/signature/user64.png
+ Attempting to move file: C:\xampp\tmp\phpC009.tmp to upload/sworn/user64.png
+ File moved successfully: upload/sworn/user64.png
+ Database insert successful. Insert ID: 7

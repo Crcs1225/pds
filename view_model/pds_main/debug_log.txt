@@ -1,0 +1,38 @@
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2002-12-12","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"Pilar","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"Bolinao","PerProvince":"01","PerZipCode":"2406","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth"}
+Raw input:
+{"education":[{"personal_info_id":65,"elemName":"Pilar Elementary School","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":65,"secondName":"Bolinao Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":65,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":65,"colName":"Pangasinan State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":65,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":65,"question_code":1,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":2,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":3,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":4,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":5,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":6,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":7,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":8,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":9,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":10,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":11,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":65,"question_code":12,"answer":"No","details":"N/A","date_filed":"N/A"}]}
+Raw input:
+{"personal_info_id":65,"Spouse_Surname":"Caracas","Spouse_Firstname":"Marc Daniel","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Caracas","Father_Firstname":"Edwin","Father_NameExtension":"","Father_Middlename":"Casta","Mother_MaidenName":"","Mother_Surname":"Awisan","Mother_Firstname":"Trudz","Mother_Middlename":"Agnawa","":"ADD"}
+ Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => 1146039.jpg
+            [full_path] => 1146039.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpFB73.tmp
+            [error] => 0
+            [size] => 1175402
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => Signature-PNG-File.png
+            [full_path] => Signature-PNG-File.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpFB84.tmp
+            [error] => 0
+            [size] => 88491
+        )
+
+)
+
+ Attempting to move file: C:\xampp\tmp\phpFB73.tmp to upload/id/user65.jpg
+ File moved successfully: upload/id/user65.jpg
+ Attempting to move file: C:\xampp\tmp\phpFB84.tmp to upload/signature/user65.png
+ File moved successfully: upload/signature/user65.png
+ No file uploaded for key: Sworn_Sig
+ One or more file uploads failed. Aborting database insert.

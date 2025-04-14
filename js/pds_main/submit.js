@@ -362,7 +362,7 @@ async function submitPersonalInfo(dataFunction) {
     const formData = dataFunction();
     console.log(formData);
     try {
-        let response = await fetch("personalInfo.php", { 
+        let response = await fetch("/pds/view_model/pds_main/personalInfo.php", { 
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
@@ -393,7 +393,7 @@ async function submitPersonalInfo(dataFunction) {
 
 
 function submitFamilyBackground() {
-    submitData("Family Background", "familybackground.php", getFamilyBackgroundData);
+    submitData("Family Background", "/pds/view_model/pds_main/familybackground.php", getFamilyBackgroundData);
 }
 
 function submitChildrenList() {
@@ -404,7 +404,7 @@ function submitChildrenList() {
         return;
     }
     
-    submitData("Children Section", "children.php", () => ({ children: childrenData }));
+    submitData("Children Section", "/pds/view_model/pds_main/children.php", () => ({ children: childrenData }));
 }
 
 function submitEducationalBackground() {
@@ -414,67 +414,67 @@ function submitEducationalBackground() {
         return;
     }
 
-    submitData("Educational Backgrounnd", "education.php", () => ({ education: educationData }));
+    submitData("Educational Backgrounnd", "/pds/view_model/pds_main/education.php", () => ({ education: educationData }));
 }
 function submitCivilServiceEligibility() {
     const civilServiceDataProcessed = getCivilServiceEligibility();
     
     if (!civilServiceDataProcessed) return; // Skip submission if no data
 
-    submitData("Civil Service Eligibility", "civil_service.php", () => ({ civil_service: civilServiceDataProcessed }));
+    submitData("Civil Service Eligibility", "/pds/view_model/pds_main/civil_service.php", () => ({ civil_service: civilServiceDataProcessed }));
 }
 function submitWorkExperience() {
     const workExperienceDataProcessed = getWorkExperience();
     
     if (!workExperienceDataProcessed) return; // Skip submission if no data
 
-    submitData("Work Experience", "work_experience.php", () => ({ work_experience: workExperienceDataProcessed }));
+    submitData("Work Experience", "/pds/view_model/pds_main/work_experience.php", () => ({ work_experience: workExperienceDataProcessed }));
 }
 function submitVoluntaryWorkData() {
     const voluntaryWorkDataProcessed = getVoluntaryWork();
     
     if (!voluntaryWorkDataProcessed) return; // Skip submission if no data
 
-    submitData("Voluntary Work", "voluntary_work.php", () => ({ voluntary_work: voluntaryWorkDataProcessed }));
+    submitData("Voluntary Work", "/pds/view_model/pds_main/voluntary_work.php", () => ({ voluntary_work: voluntaryWorkDataProcessed }));
 }
 function submitLearningData() {
     const learningDataProcessed = getLearning();
     if (!learningDataProcessed) return; // Skip submission if no data
-    submitData("Learning", "learning.php", () => ({ learning: learningDataProcessed}));
+    submitData("Learning", "/pds/view_model/pds_main/learning.php", () => ({ learning: learningDataProcessed}));
 
 }
 function submitHobbiesData(){
     const hobbiesDataProcessed = getHobbies();
     if (!hobbiesDataProcessed) return; // Skip submission if no data
-    submitData("Hobby", "hobbies.php", () => ({ hobbies: hobbiesDataProcessed}));
+    submitData("Hobby", "/pds/view_model/pds_main/hobbies.php", () => ({ hobbies: hobbiesDataProcessed}));
 
 }
 
 function submitRecognitionData() {
     const recognitionDataProcessed = getRecognition();
     if (!recognitionDataProcessed) return; // Skip submission if no data
-    submitData("Recognition", "recognition.php", () => ({ recognition: recognitionDataProcessed}));
+    submitData("Recognition", "/pds/view_model/pds_main/recognition.php", () => ({ recognition: recognitionDataProcessed}));
 }
 
 function submitMembershipData() {
     const membershipDataProcessed = getMembership();
     if (!membershipDataProcessed) return; // Skip submission if no data
-    submitData("Membership", "membership.php", () => ({ membership: membershipDataProcessed}));
+    submitData("Membership", "/pds/view_model/pds_main/membership.php", () => ({ membership: membershipDataProcessed}));
 }
 function submitReferenceData() {
     const referenceDataProcessed = getReference();
     if (!referenceDataProcessed) return; // Skip submission if no data
-    submitData("References", "references.php", () => ({ reference: referenceDataProcessed}));
+    submitData("References", "/pds/view_model/pds_main/references.php", () => ({ reference: referenceDataProcessed}));
 }
 function submitQuestionData() {
     const questionDataProcessed = getQuestion();
     if (!questionDataProcessed) return;
-    submitData("Questions", "questions.php", () => ({ question: questionDataProcessed}));
+    submitData("Questions", "/pds/view_model/pds_main/questions.php", () => ({ question: questionDataProcessed}));
 }
 function submitAttachmentsData() {
     const collectUserInputsProcessed = collectUserInputs;
     if (!collectUserInputsProcessed) return;
-    submitAttachments("Attachments", "attachments.php", collectUserInputsProcessed);
+    submitAttachments("Attachments", "/pds/view_model/pds_main/attachments.php", collectUserInputsProcessed);
 }
 
 
@@ -505,7 +505,7 @@ async function processAndSubmitData() {
 
         console.log("All data submitted successfully.");
 
-        window.location.href = `preview.php?id=${id}`;
+        window.location.href = `/pds/view/pds_preview/index.php?id=${id}`;
 
         
     } catch (error) {

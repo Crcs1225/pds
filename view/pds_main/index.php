@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/pds/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>PDS</title>
 </head>
@@ -1507,8 +1507,8 @@
 
         
     </form>
-    <script src="js/func.js"></script>
-    <script src="js/submit.js"></script>
+    <script src="/pds/js/pds_main/func.js"></script>
+    <script src="/pds/js/pds_main/submit.js"></script>
 </body>
 </html>
 
