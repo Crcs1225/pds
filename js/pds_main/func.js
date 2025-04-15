@@ -3,7 +3,7 @@ let childrenList = [];
 // Function to add a child
 function addChild(name, birthdate) {
     if (!name || !birthdate) {
-        alert("Please enter both name and birthdate.");
+        Swal.fire("Please enter both name and birthdate.");
         return false; // Indicate failure
     }
 
@@ -685,3 +685,536 @@ document.getElementById("Submit").addEventListener("click", function () {
 });
 
 
+function getModeFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const document_id = urlParams.get("id"); // Used for edit mode
+    const pds_name = urlParams.get("name"); // Used for create mode
+    const user_id = urlParams.get("user_id");
+
+    return {
+        mode: document_id ? "edit" : "create",
+        document_id,
+        pds_name,
+        user_id
+    };
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const { mode, document_id } = getModeFromURL();
+    if (mode === "edit") {
+        await fetchAndPrefillForm(document_id);
+    }
+});
+
+function removeRow(button) {
+    button.closest("tr").remove();
+}
+
+async function fetchAndPrefillForm(id) {
+    try {
+        const response = await fetch(`/pds/view_model/pds_main/getinfo.php?id=${id}`);
+        const data = await response.json();
+
+        console.log("Raw Data from PHP:", data); // Log the entire response
+
+        if (data.success && data.info) {
+            
+            console.log("Fetched data:", data);
+            const personalInfo = data.info;
+            document.querySelector('[name="Surname"]').value = personalInfo.surname || '';
+            document.querySelector('[name="Firstname"]').value = personalInfo.firstname || '';
+            document.querySelector('[name="cs_id_no"]').value = personalInfo.cs_id_no || '';
+            document.querySelector('[name="DateOfBirth"]').value = personalInfo.date_of_birth || '';
+            document.querySelector('[name="MiddleName"]').value = personalInfo.middle_name || '';
+            document.querySelector('[name="NameExtension"]').value = personalInfo.name_extension || '';
+            document.querySelector('[name="PlaceOfBirth"]').value = personalInfo.place_of_birth || '';
+            document.querySelector('[name="Sex"]').value = personalInfo.sex || '';
+            document.querySelector('[name="CivilStatus"]').value = personalInfo.civil_status || '';
+            document.querySelector('[name="Height"]').value = personalInfo.height || '';
+            document.querySelector('[name="Weight"]').value = personalInfo.weight || '';
+            document.querySelector('[name="BloodType"]').value = personalInfo.bloodtype || '';
+            document.querySelector('[name="GSIS"]').value = personalInfo.gsis_no || '';
+            document.querySelector('[name="PagIBIG"]').value = personalInfo.pagibig_no || '';
+            document.querySelector('[name="SSS"]').value = personalInfo.sss_no || '';
+            document.querySelector('[name="TIN"]').value = personalInfo.tin_no || '';
+
+
+            document.querySelector('[name="AgencyNo"]').value = personalInfo.agency_employee_no || '';
+            document.querySelector('[name="Citizenship1"]').value = personalInfo.citizenship || '';
+            document.querySelector('[name="Citizenship2"]').value = personalInfo.dual_citizenship || '';
+            document.querySelector('[name="dualCountry"]').value = personalInfo.country || '';
+            document.querySelector('[name="ResHouse_Block_LotNo"]').value = personalInfo.res_house_no || '';
+            document.querySelector('[name="ResStreet"]').value = personalInfo.res_street || '';
+            document.querySelector('[name="ResSubdivision_Village"]').value = personalInfo.res_subdivision || '';
+            document.querySelector('[name="ResBarangay"]').value = personalInfo.res_barangay || '';
+            document.querySelector('[name="ResCity_Municipality"]').value = personalInfo.res_city || '';
+            document.querySelector('[name="ResProvince"]').value = personalInfo.res_province || '';
+            document.querySelector('[name="ResZipCode"]').value = personalInfo.res_zip || '';
+            document.querySelector('[name="PerHouse_Block_LotNo"]').value = personalInfo.perm_house_no || '';
+            document.querySelector('[name="PerStreet"]').value = personalInfo.perm_street || '';
+            document.querySelector('[name="PerSubdivision_Village"]').value = personalInfo.perm_subdivision || '';
+            document.querySelector('[name="PerBarangay"]').value = personalInfo.perm_barangay || '';
+            document.querySelector('[name="PerCity_Municipality"]').value = personalInfo.perm_city || '';
+            document.querySelector('[name="PerProvince"]').value = personalInfo.perm_province || '';
+            document.querySelector('[name="PerZipCode"]').value = personalInfo.perm_zip || '';
+            document.querySelector('[name="TelephoneNumber"]').value = personalInfo.telephone_no || '';
+            document.querySelector('[name="MobileNumber"]').value = personalInfo.mobile_no || '';
+            document.querySelector('[name="EmailAdd"]').value = personalInfo.email || '';
+            // Repeat for other fields
+
+
+            if (data.family_background && data.family_background.length > 0) {
+                const familyBackground = data.family_background[0];
+                document.querySelector('[name="Spouse_Surname"]').value = familyBackground.spouse_surname || '';
+                document.querySelector('[name="Spouse_Firstname"]').value = familyBackground.spouse_firstname || '';
+                document.querySelector('[name="Spouse_NameExtension"]').value = familyBackground.spouse_name_extension || '';
+                document.querySelector('[name="Spouse_Middlename"]').value = familyBackground.spouse_middlename || '';
+                document.querySelector('[name="Spouse_Occupation"]').value = familyBackground.spouse_occupation || '';
+                document.querySelector('[name="Spouse_Employer_Businessname"]').value = familyBackground.spouse_employer || '';
+                document.querySelector('[name="Spouse_BusinessAddress"]').value = familyBackground.spouse_business_address || '';
+                document.querySelector('[name="Spouse_TelephoneNumber"]').value = familyBackground.spouse_telephone_no || '';
+                document.querySelector('[name="Father_Surname"]').value = familyBackground.father_surname || '';
+                document.querySelector('[name="Father_Firstname"]').value = familyBackground.father_firstname || '';
+                document.querySelector('[name="Father_NameExtension"]').value = familyBackground.father_name_extension || '';
+                document.querySelector('[name="Father_Middlename"]').value = familyBackground.father_middlename || '';
+                document.querySelector('[name="Mother_MaidenName"]').value = familyBackground.mother_maiden_name || '';
+                document.querySelector('[name="Mother_Surname"]').value = familyBackground.mother_surname || '';
+                document.querySelector('[name="Mother_Firstname"]').value = familyBackground.mother_firstname || '';
+                document.querySelector('[name="Mother_Middlename"]').value = familyBackground.mother_middlename || '';
+            }
+            if (data.children && data.children.length > 0) {
+                const children = data.children;
+                const tableBody = document.getElementById("spouse-children");
+                tableBody.innerHTML = ""; // Clear existing rows if any
+            
+                children.forEach((child, index) => {
+                    const row = document.createElement("tr");
+            
+                    row.innerHTML = `
+                        <td>
+                            ${child.full_name || ''}
+                        </td>
+                        <td>
+                           ${child.date_of_birth || ''}
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" onclick="removeRow(this)">Remove</button>
+                        </td>
+                    `;
+            
+                    tableBody.appendChild(row);
+                });
+            }
+            
+
+
+
+            if (data.educational_background && data.educational_background.length > 0) {
+                const elementary = data.educational_background[0];
+                document.querySelector('[name="elemName"]').value = elementary.name_of_school || '';
+                document.querySelector('[name="elemBasicEduc"]').value = elementary.basic_education_degree_course || '';
+                document.querySelector('[name="elemFrom"]').value = elementary.from_year || '';
+                document.querySelector('[name="elemTo"]').value = elementary.to_year || '';
+                document.querySelector('[name="elemUnits"]').value = elementary.highest_level_units_earned || '';
+                document.querySelector('[name="elemYrGrad"]').value = elementary.year_graduated || '';
+                document.querySelector('[name="elemHonors"]').value = elementary.scholarship_academic_honors_received || '';
+
+                const secondary = data.educational_background[1];
+                document.querySelector('[name="secondName"]').value = secondary.name_of_school || '';
+                document.querySelector('[name="secondBasicEduc"]').value = secondary.basic_education_degree_course || '';
+                document.querySelector('[name="secondFrom"]').value = secondary.from_year || '';
+                document.querySelector('[name="secondTo"]').value = secondary.to_year || '';
+                document.querySelector('[name="secondUnits"]').value = secondary.highest_level_units_earned || '';
+                document.querySelector('[name="secondYrGrad"]').value = secondary.year_graduated || '';
+                document.querySelector('[name="secondHonors"]').value = secondary.scholarship_academic_honors_received || '';
+                
+                const vocational = data.educational_background[2];
+                document.querySelector('[name="vocName"]').value = vocational.name_of_school || '';
+                document.querySelector('[name="vocCourse"]').value = vocational.basic_education_degree_course || '';
+                document.querySelector('[name="vocFrom"]').value = vocational.from_year || '';
+                document.querySelector('[name="vocTo"]').value = vocational.to_year || '';
+                document.querySelector('[name="vocUnits"]').value = vocational.highest_level_units_earned || '';
+                document.querySelector('[name="vocYrGrad"]').value = vocational.year_graduated || '';
+                document.querySelector('[name="vocHonors"]').value = vocational.scholarship_academic_honors_received || '';
+                
+                const college = data.educational_background[3];
+                document.querySelector('[name="colName"]').value = college.name_of_school || '';
+                document.querySelector('[name="vocCourse"]').value = college.basic_education_degree_course || '';
+                document.querySelector('[name="colFrom"]').value = college.from_year || '';
+                document.querySelector('[name="colTo"]').value = college.to_year || '';
+                document.querySelector('[name="colUnits"]').value = college.highest_level_units_earned || '';
+                document.querySelector('[name="colYrGrad"]').value = college.year_graduated || '';
+                document.querySelector('[name="colHonors"]').value = college.scholarship_academic_honors_received || '';
+                
+                const graduate = data.educational_background[4];
+                document.querySelector('[name="gradName"]').value = graduate.name_of_school || '';
+                document.querySelector('[name="vocCourse"]').value = graduate.basic_education_degree_course || '';
+                document.querySelector('[name="gradFrom"]').value = graduate.from_year || '';
+                document.querySelector('[name="gradTo"]').value = graduate.to_year || '';
+                document.querySelector('[name="gradUnits"]').value = graduate.highest_level_units_earned || '';
+                document.querySelector('[name="gradYrGrad"]').value = graduate.year_graduated || '';
+                document.querySelector('[name="gradHonors"]').value = graduate.scholarship_academic_honors_received || '';
+            
+
+            }
+            if (data.civil_service_eligibility && data.civil_service_eligibility.length > 0) {
+                const civilServiceData = data.civil_service_eligibility;
+                const tableBody = document.getElementById("civilServiceTable");
+                const mobileList = document.getElementById("civilServiceList");
+            
+                tableBody.innerHTML = ""; // Clear existing rows
+                mobileList.innerHTML = ""; // Clear mobile view
+            
+                civilServiceData.forEach((record) => {
+                    // Desktop table row
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                    <tr data-id="${record.id}">
+                        <td>${record.career_service}</td>
+                        <td>${record.rating}</td>
+                        <td>${record.date_of_examination}</td>
+                        <td>${record.place_of_examination}</td>
+                        <td>${record.license_no}</td>
+                        <td>${record.date_of_validity}</td>
+                        <td><button class="btn btn-danger btn-sm deleteEntry" data-id="${record.id}">Delete</button></td>
+                    </tr>`;
+                    tableBody.appendChild(row);
+            
+                    // Mobile-friendly card view
+                    const card = document.createElement("div");
+                    card.className = "card mb-2 p-2 border";
+                    card.innerHTML = `
+                    <div class="border p-3 mb-2" data-id="${record.id}">
+                        <p><strong>Service Type:</strong> ${record.career_service}</p>
+                        <p><strong>Rating:</strong> ${record.rating}</p>
+                        <p><strong>Exam Date:</strong> ${record.date_of_examination}</p>
+                        <p><strong>Exam Location:</strong> ${record.place_of_examination}</p>
+                        <p><strong>License Number:</strong> ${record.license_no}</p>
+                        <p><strong>Validity Date:</strong> ${record.date_of_validity}</p>
+                        <button class="btn btn-danger btn-sm deleteEntry" data-id="${record.id}">Delete</button>
+                    </div>
+                    `;
+                    mobileList.appendChild(card);
+                });
+            }
+
+            if (data.work_experience && data.work_experience.length > 0){
+                const workExperienceData = data.work_experience;
+                const tableBody = document.getElementById("workExperienceTable");
+                const mobileList = document.getElementById("workExperienceList");
+
+                tableBody.innerHTML = ""; // Clear existing rows
+                mobileList.innerHTML = ""; // Clear mobile view
+
+                workExperienceData.forEach((record) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                    <tr data-id="${record.id}">
+                        <td>${record.work_from}</td>
+                        <td>${record.work_to}</td>
+                        <td>${record.position_title}</td>
+                        <td>${record.department_agency}</td>
+                        <td>${record.monthly_salary}</td>
+                        <td>${record.salary_grade}</td>
+                        <td>${record.status_of_appointment}</td>
+                        <td>${record.govt_service}</td>
+                        <td><button class="btn btn-danger btn-sm deleteWorkEntry" data-id="${record.id}">Delete</button></td>
+                    </tr>
+                    `;
+                    tableBody.appendChild(row);
+
+                    
+                    const card = document.createElement("div");
+                    card.className = "card mb-2 p-2 border";
+                    card.innerHTML = `
+                    <div class="border p-3 mb-2" data-id="${record.id}">
+                        <p><strong>Position:</strong> ${record.position_title}</p>
+                        <p><strong>Department:</strong> ${record.department_agency}</p>
+                        <p><strong>Dates:</strong> ${record.work_from} - ${record.work_to}</p>
+                        <p><strong>Salary:</strong> ${record.monthly_salary}</p>
+                        <p><strong>Grade:</strong> ${record.salary_grade}</p>
+                        <p><strong>Status:</strong> ${record.status_of_appointment}</p>
+                        <p><strong>Gov Service:</strong> ${record.govt_service}</p>
+                        <button class="btn btn-danger btn-sm deleteWorkEntry" data-id="${record.id}">Delete</button>
+                    </div>`;
+
+                    mobileList.appendChild(card)
+                });
+
+            }
+            if (data.voluntary_work && data.voluntary_work.length > 0){
+                const voluntaryWorkData = data.voluntary_work;
+                const tableBody = document.getElementById("voluntaryWorkTable");
+                const mobileList = document.getElementById("voluntaryWorkList");
+
+                tableBody.innerHTML = ""; // Clear existing rows
+                mobileList.innerHTML = ""; // Clear mobile view
+
+                voluntaryWorkData.forEach((record) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                    <tr data-id="${record.id}">
+                        <td>${record.organization_name_address}</td>
+                        <td>${record.work_from}</td>
+                        <td>${record.work_to}</td>
+                        <td>${record.number_of_hours}</td>
+                        <td>${record.position_nature_of_work}</td>
+                        <td><button class="btn btn-danger btn-sm deleteWorkEntry" data-id="${record.id}">Delete</button></td>
+                    </tr>
+                    `;
+                    tableBody.appendChild(row);
+
+                    
+                    const card = document.createElement("div");
+                    card.className = "card mb-2 p-2 border";
+                    card.innerHTML = `
+                    <div class="card mb-2" data-id="${record.id}">
+                        <div class="card-body">
+                            <h5 class="card-title">${record.organization_name_address}</h5>
+                            <p class="card-text"><b>Position:</b> ${record.position_nature_of_work}</p>
+                            <p class="card-text"><b>From:</b> ${record.work_from} <b>To:</b> ${record.work_to}</p>
+                            <p class="card-text"><b>Hours:</b> ${record.number_of_hours}</p>
+                            <button class="btn btn-danger btn-sm deleteVolEntry" data-id="${record.id}">Delete</button>
+                        </div>
+                    </div>`;
+
+                    mobileList.appendChild(card)
+                });
+
+            }
+            if (data.learning_and_development && data.learning_and_development.length > 0){
+                const learningData = data.learning_and_development;
+                const tableBody = document.getElementById("learningDevelopmentTable");
+                const mobileList = document.getElementById("learningDevelopmentList");
+
+                tableBody.innerHTML = ""; // Clear existing rows
+                mobileList.innerHTML = ""; // Clear mobile view
+
+                learningData.forEach((record) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                    <tr data-id="${record.id}">
+                        <td>${record.title}</td>
+                        <td>${record.ld_from}</td>
+                        <td>${record.ld_to}</td>
+                        <td>${record.number_of_hours}</td>
+                        <td>${record.type_of_ld}</td>
+                        <td>${record.conducted_by}</td>
+                        <td><button class="btn btn-danger btn-sm deleteLdEntry" data-id="${record.id}">Delete</button></td>
+                    </tr>`;
+                    tableBody.appendChild(row);
+
+                    
+                    const card = document.createElement("div");
+                    card.className = "card mb-2 p-2 border";
+                    card.innerHTML =  `
+                    <div class="card mb-2" data-id="${record.id}">
+                        <div class="card-body">
+                            <h6 class="card-title"><b>${record.title}</b></h6>
+                            <p><b>Type:</b> ${record.type_of_ld}</p>
+                            <p><b>From:</b> ${record.ld_from} - <b>To:</b> ${record.ld_to}</p>
+                            <p><b>Hours:</b> ${record.number_of_hours}</p>
+                            <p><b>Sponsored by:</b> ${record.conducted_by}</p>
+                            <button class="btn btn-danger btn-sm deleteLdEntry" data-id="${record.id}">Delete</button>
+                        </div>
+                    </div>`;
+
+                    mobileList.appendChild(card)
+                });
+
+            }
+            if (data.special_skills_hobbies && data.special_skills_hobbies.length > 0) {
+                const skillsData = data.special_skills_hobbies;
+                const list = document.getElementById("specialSkillsList");
+                skillsData.forEach((record) => {
+                    const listItem = document.createElement("li");
+                    listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+                    listItem.innerHTML = `
+                        ${record.skill_hobby}
+                        <button class="btn btn-danger btn-sm delete-btn">x</button>
+                    `;
+
+                    list.appendChild(listItem);
+
+                });
+
+            }
+            if (data.non_academic_distinctions && data.non_academic_distinctions.length > 0) {
+                const distinctionsData = data.non_academic_distinctions;
+                const list = document.getElementById("nonAcademicList");
+                distinctionsData.forEach((record) => {
+                    const listItem = document.createElement("li");
+                    listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+                    listItem.innerHTML = `
+                        ${record.recognition}
+                        <button class="btn btn-danger btn-sm delete-btn">x</button>
+                    `;
+
+                    list.appendChild(listItem);
+
+                });
+
+            }   
+            if (data.memberships && data.memberships.length > 0) {
+                const membershipData = data.memberships;
+                const list = document.getElementById("membershipList");
+                membershipData.forEach((record) => {
+                    const listItem = document.createElement("li");
+                    listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+                    listItem.innerHTML = `
+                        ${record.organization_name}
+                        <button class="btn btn-danger btn-sm delete-btn">x</button>
+                    `;
+
+                    list.appendChild(listItem);
+
+                });
+
+            }   
+            if (data.survey_responses && data.survey_responses.length > 0) {
+                const responses = data.survey_responses;
+                if (responses[0]) {
+                    const q1Value = responses[0].answer;
+                    if (q1Value === "Yes") {
+                        document.getElementById("TDYes").checked = true;
+                    } else {
+                        document.getElementById("TDNo").checked = true;
+                    }
+                }
+                if (responses[1]) {
+                    const q2Value = responses[1].answer;
+                    if (q2Value === "Yes") {
+                        document.getElementById("FDYes").checked = true;
+                    } else {
+                        document.getElementById("FDNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("FDDetails").value = responses[1].details || '';
+                }
+                if (responses[2]) {
+                    const q3Value = responses[2].answer;
+                    if (q3Value === "Yes") {
+                        document.getElementById("AOYes").checked = true;
+                    } else {
+                        document.getElementById("AONo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("AODetails").value = responses[2].details || '';
+                }
+                //start here
+                if (responses[3]) {
+                    const q4Value = responses[3].answer;
+                    if (q4Value === "Yes") {
+                        document.getElementById("CCYes").checked = true;
+                    } else {
+                        document.getElementById("CCNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("CCDate").value = responses[3].response_date || '';
+                    document.getElementById("CCSOC").value = responses[3].details || '';
+                }
+                if (responses[4]) {
+                    const q5Value = responses[4].answer;
+                    if (q5Value === "Yes") {
+                        document.getElementById("CONYes").checked = true;
+                    } else {
+                        document.getElementById("CONNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("CONDetails").value = responses[4].details || '';
+                }
+                if (responses[5]) {
+                    const q6Value = responses[5].answer;
+                    if (q6Value === "Yes") {
+                        document.getElementById("SFTSYes").checked = true;
+                    } else {
+                        document.getElementById("SFTSNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("SFTSDetails").value = responses[5].details || '';
+                }
+                if (responses[6]) {
+                    const q7Value = responses[6].answer;
+                    if (q7Value === "Yes") {
+                        document.getElementById("CNOLEYes").checked = true;
+                    } else {
+                        document.getElementById("CNOLENo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("CNOLEDetails").value = responses[6].details || '';
+                }
+                if (responses[7]) {
+                    const q8Value = responses[7].answer;
+                    if (q8Value === "Yes") {
+                        document.getElementById("RGSYes").checked = true;
+                    } else {
+                        document.getElementById("RGSNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("RGSDetails").value = responses[7].details || '';
+                }
+                if (responses[8]) {
+                    const q9Value = responses[8].answer;
+                    if (q9Value === "Yes") {
+                        document.getElementById("SIoPSYes").checked = true;
+                    } else {
+                        document.getElementById("SIoPSNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("SIoPSDetails").value = responses[8].details || '';
+                }
+                if (responses[9]) {
+                    const q10Value = responses[9].answer;
+                    if (q10Value === "Yes") {
+                        document.getElementById("IGYes").checked = true;
+                    } else {
+                        document.getElementById("IGNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("IGDetails").value = responses[9].details || '';
+                }
+                if (responses[10]) {
+                    const q11Value = responses[10].answer;
+                    if (q11Value === "Yes") {
+                        document.getElementById("PwDYes").checked = true;
+                    } else {
+                        document.getElementById("PwDNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("PwDDetails").value = responses[10].details || '';
+                }
+                if (responses[11]) {
+                    const q12Value = responses[11].answer;
+                    if (q12Value === "Yes") {
+                        document.getElementById("SPYes").checked = true;
+                    } else {
+                        document.getElementById("SPNo").checked = true;
+                    }
+            
+                    // Populate details (textarea)
+                    document.getElementById("SPDetails").value = responses[11].details || '';
+                }
+
+            }
+
+        } else {
+            Swal.fire("Failed to load existing data for editing.");
+        }
+    } catch (error) {
+        Swal.fire({
+            title:"Error fetching existing data",
+            text:error,
+            icon: "error"
+        });
+    }
+}

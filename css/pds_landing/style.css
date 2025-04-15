@@ -1,0 +1,62 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+/* Checkbox column style */
+td .form-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Modern minimal checkbox */
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+}
+
+/* Checked state */
+.form-check-input:checked {
+    background-color: #198754; /* Bootstrap success color */
+    border-color: #198754;
+    box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.25);
+}
+
+/* Add subtle hover effect */
+.form-check-input:hover {
+    border-color: #0d6efd; /* Bootstrap primary */
+}
+
+/* Fix checkbox alignment inside td */
+td {
+    vertical-align: middle !important;
+}
+
+table thead th {
+    font-weight: 600; /* Normal is 400, Bold is 700 — 500 is in-between */
+    color: #343a40;    /* Optional: softer dark gray for a modern look */
+}
+tr:has(input[type="checkbox"]:checked) {
+    background-color: transparent !important;
+}

@@ -357,10 +357,16 @@ async function submitAttachments(sectionId, apiEndpoint, dataFunction) {
 }
 
 
-
 async function submitPersonalInfo(dataFunction) {
     const formData = dataFunction();
-    console.log(formData);
+    const { mode, document_id, pds_name, user_id } = getModeFromURL();
+
+    if (mode === "create") {
+        formData.pds_name = pds_name; //for 
+        formData.user_id = user_id;
+    } else {
+        formData.document_id = document_id; // This is the personalInfoId used to update
+    }
     try {
         let response = await fetch("/pds/view_model/pds_main/personalInfo.php", { 
             method: "POST",
@@ -505,7 +511,7 @@ async function processAndSubmitData() {
 
         console.log("All data submitted successfully.");
 
-        window.location.href = `/pds/view/pds_preview/index.php?id=${id}`;
+        window.location.href = `/pds/view/pds_landing/`; //change if preview or table
 
         
     } catch (error) {

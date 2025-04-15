@@ -19,7 +19,7 @@ async function submitAction(actionType) {
             action: actionType
         };
 
-        let response = await fetch("process.php", {
+        let response = await fetch("/pds/view_model/pds_preview/process.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
@@ -38,7 +38,7 @@ async function submitAction(actionType) {
             alert(data.message);
 
             // Redirect only if confirm, or customize
-            window.location.href = "index.php";
+            window.location.href = "/pds/view/pds_landing/index.php";
         } else {
             throw new Error(data.message || "Something went wrong.");
         }

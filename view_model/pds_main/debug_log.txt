@@ -36,3 +36,153 @@ Raw input:
  File moved successfully: upload/signature/user65.png
  No file uploaded for key: Sworn_Sig
  One or more file uploads failed. Aborting database insert.
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2002-12-12","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"Pilar","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"Bolinao","PerProvince":"01","PerZipCode":"2406","TelephoneNumber":"09380013909","MobileNumber":"09099348343","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"Pds 3","user_id":1}
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2002-12-12","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"Pilar","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"Bolinao","PerProvince":"01","PerZipCode":"2406","TelephoneNumber":"09380013909","MobileNumber":"09099348343","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"Pds 3","user_id":1}
+Raw input:
+{"question":[{"personal_info_id":66,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":66,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+Raw input:
+{"education":[{"personal_info_id":66,"elemName":"Pilar Elementary School","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":66,"secondName":"Bolinao Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":66,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":66,"colName":"Pangasinan State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":66,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"personal_info_id":66,"Spouse_Surname":"Caracas","Spouse_Firstname":"Marc Daniel","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Caracas","Father_Firstname":"Edwin","Father_NameExtension":"","Father_Middlename":"Casta","Mother_MaidenName":"","Mother_Surname":"Awisan","Mother_Firstname":"Trudz","Mother_Middlename":"Agnawa","":"ADD"}
+ Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => jp.png
+            [full_path] => jp.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php3F89.tmp
+            [error] => 0
+            [size] => 66455
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => Signature-PNG-File.png
+            [full_path] => Signature-PNG-File.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php3F8A.tmp
+            [error] => 0
+            [size] => 88491
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => Signature-PNG-File.png
+            [full_path] => Signature-PNG-File.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php3F9B.tmp
+            [error] => 0
+            [size] => 88491
+        )
+
+)
+
+ Attempting to move file: C:\xampp\tmp\php3F89.tmp to upload/id/user66.png
+ File moved successfully: upload/id/user66.png
+ Attempting to move file: C:\xampp\tmp\php3F8A.tmp to upload/signature/user66.png
+ File moved successfully: upload/signature/user66.png
+ Attempting to move file: C:\xampp\tmp\php3F9B.tmp to upload/sworn/user66.png
+ File moved successfully: upload/sworn/user66.png
+ Database insert successful. Insert ID: 8
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2002-12-26","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"Pilar","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"Bolinao","PerProvince":"01","PerZipCode":"2406","TelephoneNumber":"09380013909","MobileNumber":"09454374433","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"pds 3","user_id":1}
+Raw input:
+{"personal_info_id":67,"Spouse_Surname":"Caracas","Spouse_Firstname":"Marc Daniel","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Caracas","Father_Firstname":"Edwin","Father_NameExtension":"","Father_Middlename":"Casta","Mother_MaidenName":"","Mother_Surname":"Awisan","Mother_Firstname":"Trudz","Mother_Middlename":"Agnawa","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":67,"elemName":"Pilar Elementary School","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":67,"secondName":"Bolinao Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":67,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":67,"colName":"Pangasinan State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":67,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":67,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":67,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => jay.png
+            [full_path] => jay.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpD1AD.tmp
+            [error] => 0
+            [size] => 58353
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => Signature-PNG-File.png
+            [full_path] => Signature-PNG-File.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpD1AE.tmp
+            [error] => 0
+            [size] => 88491
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpD1BF.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ Attempting to move file: C:\xampp\tmp\phpD1AD.tmp to upload/id/user67.png
+ File moved successfully: upload/id/user67.png
+ Attempting to move file: C:\xampp\tmp\phpD1AE.tmp to upload/signature/user67.png
+ File moved successfully: upload/signature/user67.png
+ Attempting to move file: C:\xampp\tmp\phpD1BF.tmp to upload/sworn/user67.png
+ File moved successfully: upload/sworn/user67.png
+ Database insert successful. Insert ID: 9
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2002-12-12","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"Pilar","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"Bolinao","PerProvince":"01","PerZipCode":"2406","TelephoneNumber":"09380013909","MobileNumber":"0937872924","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"pds 4","user_id":1}
+Raw input:
+{"personal_info_id":68,"Spouse_Surname":"Caracas","Spouse_Firstname":"Marc Daniel","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Caracas","Father_Firstname":"Edwin","Father_NameExtension":"","Father_Middlename":"Casta","Mother_MaidenName":"","Mother_Surname":"Awisan","Mother_Firstname":"Trudz","Mother_Middlename":"Agnawa","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":68,"elemName":"Pilar Elementary School","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":68,"secondName":"Bolinao Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":68,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":68,"colName":"Pangasinan State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":68,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":68,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":68,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ Received Files: Array
+(
+)
+
+ No file uploaded for key: C4_Picture
+ No file uploaded for key: C4_Signature
+ No file uploaded for key: Sworn_Sig
+ One or more file uploads failed. Aborting database insert.
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2020-12-12","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"Pilar","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"Bolinao","PerProvince":"01","PerZipCode":"2406","TelephoneNumber":"09380013909","MobileNumber":"09473445453","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"pds 5","user_id":1}
+Raw input:
+{"personal_info_id":69,"Spouse_Surname":"Caracas","Spouse_Firstname":"Marc Daniel","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Caracas","Father_Firstname":"Edwin","Father_NameExtension":"","Father_Middlename":"Casta","Mother_MaidenName":"","Mother_Surname":"Awisan","Mother_Firstname":"Trudz","Mother_Middlename":"Agnawa","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":69,"elemName":"Pilar Elementary School","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":69,"secondName":"Bolinao Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":69,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":69,"colName":"Pangasinan State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":69,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":69,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":69,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ Received Files: Array
+(
+)
+
+ No file uploaded for key: C4_Picture
+ No file uploaded for key: C4_Signature
+ No file uploaded for key: Sworn_Sig
+ One or more file uploads failed. Aborting database insert.
+Raw input:
+{"cs_id_no":"","Surname":"Caracas","Firstname":"Marc Daniel","NameExtension":"","MiddleName":"Awisan","DateOfBirth":"2002-12-12","PlaceOfBirth":"Bolinao","Height":"168","Weight":"68","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"","ResHouse_Block_LotNo":"","ResStreet":"","ResSubdivision_Village":"","ResBarangay":"Pilar","ResCity_Municipality":"Bolinao","ResProvince":"Pangasinan","ResZipCode":"2406","PerHouse_Block_LotNo":"","PerStreet":"Pilar","PerSubdivision_Village":"","PerBarangay":"","PerCity_Municipality":"Bolinao","PerProvince":"01","PerZipCode":"2406","TelephoneNumber":"09380013909","MobileNumber":"0937497374","EmailAdd":"mrcdnlcrccs@gmail.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"pds 6","user_id":1}
+Raw input:
+{"personal_info_id":70,"Spouse_Surname":"Caracas","Spouse_Firstname":"Marc Daniel","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Caracas","Father_Firstname":"Edwin","Father_NameExtension":"","Father_Middlename":"Casta","Mother_MaidenName":"","Mother_Surname":"Awisan","Mother_Firstname":"Trudz","Mother_Middlename":"Agnawa","":"ADD"}
+Raw input:
+{"question":[{"personal_info_id":70,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":70,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ Received Files: Array
+(
+)
+
+ No file uploaded for key: C4_Picture
+ No file uploaded for key: C4_Signature
+ No file uploaded for key: Sworn_Sig
+ One or more file uploads failed. Aborting database insert.
+Raw input:
+{"education":[{"personal_info_id":70,"elemName":"Pilar Elementary School","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":70,"secondName":"Bolinao Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":70,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":70,"colName":"Pangasinan State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":70,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+

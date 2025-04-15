@@ -46,6 +46,8 @@ foreach ($required_fields as $field) {
 
 // Assign values with default values to prevent NULL errors
 $cs_id_no = $data['cs_id_no'];
+$pds_name = $data['pds_name'];
+$user_id = $data['user_id']; 
 $surname = $data['surname'];
 $firstname = $data['firstname'];
 $middle_name = $data['middlename'];
@@ -91,12 +93,12 @@ $email = $data['emailadd'];
 
 // Prepare SQL Statement
 $stmt = $con->prepare("INSERT INTO personal_information (
-    cs_id_no, surname, firstname, middle_name, name_extension, date_of_birth, place_of_birth, sex, civil_status, 
+    pds_name, user_id, cs_id_no, surname, firstname, middle_name, name_extension, date_of_birth, place_of_birth, sex, civil_status, 
     height, weight, bloodtype, gsis_no, pagibig_no, philhealth_no, sss_no, tin_no, agency_employee_no, 
     citizenship, dual_citizenship, country, res_house_no, res_street, res_subdivision, res_barangay, res_city, 
     res_province, res_zip, perm_house_no, perm_street, perm_subdivision, perm_barangay, perm_city, perm_province, 
     perm_zip, telephone_no, mobile_no, email, created_at, updated_at
-) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())");
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())");
 
 if (!$stmt) {
     echo json_encode(["success" => false, "error" => "SQL prepare failed: " . $con->error]);
@@ -104,8 +106,8 @@ if (!$stmt) {
 }
 
 // Bind parameters
-$stmt->bind_param("ssssssssssssssssssssssssssssssssssssss", 
-    $cs_id_no, $surname, $firstname, $middle_name, $name_extension, $date_of_birth, $place_of_birth, $sex, $civil_status, 
+$stmt->bind_param("ssssssssssssssssssssssssssssssssssssssss", 
+    $pds_name, $user_id, $cs_id_no, $surname, $firstname, $middle_name, $name_extension, $date_of_birth, $place_of_birth, $sex, $civil_status, 
     $height, $weight, $bloodtype, $gsis_no, $pagibig_no, $philhealth_no, $sss_no, $tin_no, $agency_employee_no, 
     $citizenship, $dual_citizenship, $country, $res_house_no, $res_street, $res_subdivision, $res_barangay, $res_city, 
     $res_province, $res_zip, $perm_house_no, $perm_street, $perm_subdivision, $perm_barangay, $perm_city, $perm_province, 
