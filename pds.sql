@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Apr 04, 2025 at 09:12 AM
+-- Generation Time: Apr 22, 2025 at 04:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,6 +43,15 @@ CREATE TABLE `attachment` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `attachment`
+--
+
+INSERT INTO `attachment` (`id`, `personal_info_id`, `government_issued_id`, `id_license_passport_no`, `date_place_of_issuance`, `person_signature`, `date_accomplished`, `id_picture`, `subscribed_and_sworn_date`, `person_administering_oath`, `signature_of_person_administering_oath`, `created_at`, `updated_at`) VALUES
+(7, 64, 'Driver\'s License', 'A07-21-854734', 'Lingayen', 'upload/signature/user64.png', '2025-01-01', 'upload/id/user64.png', '2025-01-12', 'Admin Oath', 'upload/sworn/user64.png', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(13, 83, 'dsfds', 'fdsf', 'fdsf', NULL, '0000-00-00', NULL, '0000-00-00', '', 'upload/sworn/user83.png', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(15, 87, 'dsfds', 'fdsf', 'fdsf', 'upload/signature/user87.png', '0000-00-00', 'upload/id/user87.png', '0000-00-00', '', 'upload/sworn/user87.png', '2025-04-22 02:43:18', '2025-04-22 02:43:18');
+
 -- --------------------------------------------------------
 
 --
@@ -57,6 +66,13 @@ CREATE TABLE `children` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `children`
+--
+
+INSERT INTO `children` (`id`, `personal_info_id`, `full_name`, `date_of_birth`, `created_at`, `updated_at`) VALUES
+(16, 83, 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25');
 
 -- --------------------------------------------------------
 
@@ -98,6 +114,32 @@ CREATE TABLE `educational_background` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `educational_background`
+--
+
+INSERT INTO `educational_background` (`id`, `personal_info_id`, `educ_level`, `name_of_school`, `basic_education_degree_course`, `from_year`, `to_year`, `highest_level_units_earned`, `year_graduated`, `scholarship_academic_honors_received`, `created_at`, `updated_at`) VALUES
+(141, 64, 'Elementary', 'Pilar Elementary School', 'Basic Education', '2009', '2015', '', '2015', 'Honor', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(142, 64, 'Secondary', 'Bolinao Integrated School', 'Basic Education', '2015', '2021', '', '2021', 'Honor', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(143, 64, 'Vocational', '', '', '0000', '0000', '', '0000', '', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(144, 64, 'College', 'Pangasinan State University', 'BS Computer Science', '2021', '2025', '', '2025', 'Distinction', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(145, 64, 'Graduate Studies', '', '', '0000', '0000', '', '0000', '', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(166, 69, 'Elementary', 'Pilar Elementary School', 'Basic Education', '2009', '2015', '', '2015', 'Honor', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(167, 69, 'Secondary', 'Bolinao Integrated School', 'Basic Education', '2015', '2021', '', '2021', 'Honor', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(168, 69, 'Vocational', '', '', '0000', '0000', '', '0000', '', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(169, 69, 'College', 'Pangasinan State University', 'BS Computer Science', '2021', '2025', '', '2025', 'Distinction', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(170, 69, 'Graduate Studies', '', '', '0000', '0000', '', '0000', '', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(246, 83, 'Elementary', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(247, 83, 'Secondary', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(248, 83, 'Vocational', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(249, 83, 'College', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(250, 83, 'Graduate Studies', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(256, 87, 'Elementary', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(257, 87, 'Secondary', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(258, 87, 'Vocational', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(259, 87, 'College', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(260, 87, 'Graduate Studies', '', '', '0000', '0000', '', '0000', '', '2025-04-22 02:43:17', '2025-04-22 02:43:17');
+
 -- --------------------------------------------------------
 
 --
@@ -126,6 +168,17 @@ CREATE TABLE `family_background` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `family_background`
+--
+
+INSERT INTO `family_background` (`id`, `personal_info_id`, `spouse_surname`, `spouse_firstname`, `spouse_middlename`, `spouse_name_extension`, `spouse_occupation`, `spouse_employer`, `spouse_business_address`, `spouse_telephone_no`, `father_surname`, `father_firstname`, `father_middlename`, `father_name_extension`, `mother_maiden_name`, `mother_surname`, `mother_firstname`, `mother_middlename`, `created_at`, `updated_at`) VALUES
+(34, 64, '', '', '', '', '', 'N/A', 'N/A', 'N/A', 'Caracas', 'Edwin', 'Casta', '', 'N/A', 'Awisan', 'Trudz', 'Agnawa', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(39, 69, 'Caracas', 'Marc Daniel', '', '', '', 'N/A', 'N/A', 'N/A', 'Caracas', 'Edwin', 'Casta', '', 'N/A', 'Awisan', 'Trudz', 'Agnawa', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(47, 82, '', '', '', '', '', 'N/A', 'N/A', 'N/A', 'Caracas', 'Edwin', 'Casta', '', 'N/A', 'Awisan', 'Trudz', 'Agnawa', '2025-04-22 01:05:26', '2025-04-22 01:05:26'),
+(57, 83, '', '', '', '', '', 'N/A', 'N/A', 'N/A', '', '', '', '', 'N/A', '', '', '', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(59, 87, '', '', '', '', '', 'N/A', 'N/A', 'N/A', '', '', '', '', 'N/A', '', '', '', '2025-04-22 02:43:17', '2025-04-22 02:43:17');
 
 -- --------------------------------------------------------
 
@@ -160,6 +213,15 @@ CREATE TABLE `memberships` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `memberships`
+--
+
+INSERT INTO `memberships` (`id`, `personal_info_id`, `organization_name`, `created_at`, `updated_at`) VALUES
+(5, 64, 'org x', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(25, 83, 'sfdsf', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(26, 83, 'dfdsf', '2025-04-22 02:33:25', '2025-04-22 02:33:25');
+
 -- --------------------------------------------------------
 
 --
@@ -182,6 +244,8 @@ CREATE TABLE `non_academic_distinctions` (
 
 CREATE TABLE `personal_information` (
   `id` int(11) NOT NULL,
+  `pds_name` varchar(100) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `cs_id_no` varchar(20) NOT NULL DEFAULT 'N/A',
   `surname` varchar(50) NOT NULL,
   `firstname` varchar(50) NOT NULL,
@@ -225,6 +289,17 @@ CREATE TABLE `personal_information` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `personal_information`
+--
+
+INSERT INTO `personal_information` (`id`, `pds_name`, `user_id`, `cs_id_no`, `surname`, `firstname`, `middle_name`, `name_extension`, `date_of_birth`, `place_of_birth`, `sex`, `civil_status`, `height`, `weight`, `bloodtype`, `gsis_no`, `pagibig_no`, `philhealth_no`, `sss_no`, `tin_no`, `agency_employee_no`, `citizenship`, `dual_citizenship`, `country`, `res_house_no`, `res_street`, `res_subdivision`, `res_barangay`, `res_city`, `res_province`, `res_zip`, `perm_house_no`, `perm_street`, `perm_subdivision`, `perm_barangay`, `perm_city`, `perm_province`, `perm_zip`, `telephone_no`, `mobile_no`, `email`, `status`, `created_at`, `updated_at`) VALUES
+(64, 'PDS 1', 1, '', 'Caracas', 'Marc Daniel', 'Awisan', '', '2002-12-25', 'Bolinao', 'Male', 'Single', 168.00, 68.00, '', '', '', '', '', '', '', 'Filipino', 'By Birth', '', '', '', '', 'Pilar', 'Bolinao', 'Pangasinan', '2406', '', '', '', '', '', '', '', '', '09380013909', 'mrcdnlcrccs@gmail.com', 'inactive', '2025-04-14 00:50:57', '2025-04-21 05:15:02'),
+(69, 'pds 5', 1, '', 'Caracas', 'Marc Daniel', 'Awisan', '', '2020-12-12', 'Bolinao', 'Male', 'Single', 168.00, 68.00, '', '', '', '', '', '', '', 'Filipino', 'By Birth', '', '', '', '', 'Pilar', 'Bolinao', 'Pangasinan', '2406', '', 'Pilar', '', '', 'Bolinao', '01', '2406', '09380013909', '09473445453', 'mrcdnlcrccs@gmail.com', 'active', '2025-04-14 08:36:49', '2025-04-22 02:47:25'),
+(82, 'new', 1, '', 'Caracas', 'Marc Daniel', 'Awisan', '', '3002-12-12', 'Bolinao', 'Male', 'Single', 168.00, 68.00, '', '', '', '', '', '', '', 'Filipino', 'By Birth', 'Pilipinas', '', '', '', 'Pilar', 'Bolinao', 'Pangasinan', '2406', '', '', '', '', '', '', '', '', '0974953353', 'mrcdnlcrccs@gmail.com', 'inactive', '2025-04-22 01:05:26', '2025-04-22 02:47:25'),
+(83, 'new', 1, '', 'Caracas', 'Marc Daniel', 'Awisan', '', '2002-12-12', 'Bolinao', 'Male', 'Single', 168.00, 68.00, '', '', '', '', '', '', '', 'Filipino', 'By Birth', 'Pilipinas', '', '', '', 'Pilar', 'Bolinao', 'Pangasinan', '2406', '', '', '', '', '', '', '', '', '098335', 'mrcdnlcrccs@gmail.com', 'inactive', '2025-04-22 02:33:25', '2025-04-22 02:47:25'),
+(87, 'sda', 1, '', 'Caracas', 'Marc Daniel', 'Awisan', '', '2002-12-12', 'Bolinao', 'Male', 'Single', 168.00, 68.00, '', '', '', '', '', '', '', 'Filipino', 'By Birth', 'Pilipinas', '', '', '', 'Pilar', 'Bolinao', 'Pangasinan', '2406', '', '', '', '', '', '', '', '', '5632335', 'mrcdnlcrccs@gmail.com', 'inactive', '2025-04-22 02:43:17', '2025-04-22 02:47:25');
+
 -- --------------------------------------------------------
 
 --
@@ -241,6 +316,14 @@ CREATE TABLE `reference` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `reference`
+--
+
+INSERT INTO `reference` (`id`, `personal_info_id`, `name`, `address`, `telephone_no`, `created_at`, `updated_at`) VALUES
+(6, 64, 'person 1', 'person_1@geemail.com', '09654623341', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(17, 83, 'sdfds', 'dsafsfsfda', 'N/A', '2025-04-22 02:33:25', '2025-04-22 02:33:25');
+
 -- --------------------------------------------------------
 
 --
@@ -254,6 +337,13 @@ CREATE TABLE `special_skills_hobbies` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `special_skills_hobbies`
+--
+
+INSERT INTO `special_skills_hobbies` (`id`, `personal_info_id`, `skill_hobby`, `created_at`, `updated_at`) VALUES
+(9, 64, 'coding', '2025-04-14 00:50:57', '2025-04-14 00:50:57');
 
 -- --------------------------------------------------------
 
@@ -272,6 +362,60 @@ CREATE TABLE `survey_responses` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `survey_responses`
+--
+
+INSERT INTO `survey_responses` (`id`, `personal_info_id`, `question_code`, `answer`, `details`, `response_date`, `created_at`, `updated_at`) VALUES
+(337, 64, '1', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(338, 64, '2', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(339, 64, '3', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(340, 64, '4', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(341, 64, '5', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(342, 64, '6', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(343, 64, '7', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(344, 64, '8', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(345, 64, '9', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(346, 64, '10', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(347, 64, '11', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(348, 64, '12', 'No', 'N/A', '0000-00-00', '2025-04-14 00:50:57', '2025-04-14 00:50:57'),
+(397, 69, '1', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(398, 69, '2', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(399, 69, '3', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(400, 69, '4', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(401, 69, '5', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(402, 69, '6', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(403, 69, '7', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(404, 69, '8', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(405, 69, '9', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(406, 69, '10', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(407, 69, '11', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(408, 69, '12', 'Yes', 'N/A', '0000-00-00', '2025-04-14 08:36:49', '2025-04-14 08:36:49'),
+(577, 83, '1', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(578, 83, '2', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(579, 83, '3', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(580, 83, '4', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(581, 83, '5', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(582, 83, '6', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(583, 83, '7', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(584, 83, '8', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(585, 83, '9', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(586, 83, '10', 'No', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(587, 83, '11', 'No', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(588, 83, '12', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:33:25', '2025-04-22 02:33:25'),
+(601, 87, '1', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(602, 87, '2', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(603, 87, '3', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(604, 87, '4', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(605, 87, '5', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(606, 87, '6', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:17', '2025-04-22 02:43:17'),
+(607, 87, '7', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:18', '2025-04-22 02:43:18'),
+(608, 87, '8', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:18', '2025-04-22 02:43:18'),
+(609, 87, '9', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:18', '2025-04-22 02:43:18'),
+(610, 87, '10', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:18', '2025-04-22 02:43:18'),
+(611, 87, '11', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:18', '2025-04-22 02:43:18'),
+(612, 87, '12', 'Yes', 'N/A', '0000-00-00', '2025-04-22 02:43:18', '2025-04-22 02:43:18');
+
 -- --------------------------------------------------------
 
 --
@@ -289,6 +433,13 @@ CREATE TABLE `voluntary_work` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `voluntary_work`
+--
+
+INSERT INTO `voluntary_work` (`id`, `personal_info_id`, `organization_name_address`, `work_from`, `work_to`, `number_of_hours`, `position_nature_of_work`, `created_at`, `updated_at`) VALUES
+(4, 64, 'any', '2021-01-01', '2021-03-03', 500, 'any', '2025-04-14 00:50:57', '2025-04-14 00:50:57');
 
 -- --------------------------------------------------------
 
@@ -310,6 +461,13 @@ CREATE TABLE `work_experience` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `work_experience`
+--
+
+INSERT INTO `work_experience` (`id`, `personal_info_id`, `work_from`, `work_to`, `position_title`, `department_agency`, `monthly_salary`, `salary_grade`, `status_of_appointment`, `govt_service`, `created_at`, `updated_at`) VALUES
+(3, 64, '2020-01-01', '2025-01-01', 'Any', 'Company X', 15000.00, '14', 'any', 'No', '2025-04-14 00:50:57', '2025-04-14 00:50:57');
 
 --
 -- Indexes for dumped tables
@@ -420,85 +578,85 @@ ALTER TABLE `work_experience`
 -- AUTO_INCREMENT for table `attachment`
 --
 ALTER TABLE `attachment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `children`
 --
 ALTER TABLE `children`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `civil_service_eligibility`
 --
 ALTER TABLE `civil_service_eligibility`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `educational_background`
 --
 ALTER TABLE `educational_background`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
 
 --
 -- AUTO_INCREMENT for table `family_background`
 --
 ALTER TABLE `family_background`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT for table `learning_and_development`
 --
 ALTER TABLE `learning_and_development`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `memberships`
 --
 ALTER TABLE `memberships`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `non_academic_distinctions`
 --
 ALTER TABLE `non_academic_distinctions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `personal_information`
 --
 ALTER TABLE `personal_information`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `reference`
 --
 ALTER TABLE `reference`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `special_skills_hobbies`
 --
 ALTER TABLE `special_skills_hobbies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `survey_responses`
 --
 ALTER TABLE `survey_responses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=313;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=613;
 
 --
 -- AUTO_INCREMENT for table `voluntary_work`
 --
 ALTER TABLE `voluntary_work`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `work_experience`
 --
 ALTER TABLE `work_experience`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
