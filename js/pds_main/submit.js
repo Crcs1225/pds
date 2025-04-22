@@ -1,9 +1,14 @@
-let id = null;
+
 
 
 function getPersonalInfoData() {
     let formData = {};
 
+    // Only add ID if editing
+    const urlParams = getModeFromURL();
+    if (urlParams.mode === "edit") {
+        formData["id"] = parseInt(urlParams.document_id); // this is the personal_information.id
+    }
 
     // Get other inputs
     formData["cs_id_no"] = document.getElementById("CSID") ? document.getElementById("CSID").value.trim() : "";
@@ -20,15 +25,16 @@ function getPersonalInfoData() {
         const selectedRadio = section.querySelector(`input[name="${name}"]:checked`);
         formData[name] = selectedRadio ? selectedRadio.value : ""; // Assign value if checked, else empty
     });
-    console.log("Collected Personal Info Data:", formData);
 
+    console.log("Collected Personal Info Data:", formData);
     return formData;
 }
-function getFamilyBackgroundData() {
+
+function getFamilyBackgroundData(personalInfoId) {
     let formData = {};
     const section = document.getElementById("familyBackground");
     if (!section) return null;
-    formData["personal_info_id"] = id;
+    formData["personal_info_id"] = personalInfoId;
     section.querySelectorAll("input, textarea, select").forEach(field => {
         formData[field.name] = field.value.trim();
     });
@@ -36,8 +42,8 @@ function getFamilyBackgroundData() {
     return formData;
 
 }
-function getChildrenFormData() {
-    if (!id) {  
+function getChildrenFormData(personalInfoId) {
+    if (!personalInfoId) {  
         alert("Missing Personal Info ID. Please complete previous sections.");
         return null;
     }
@@ -48,14 +54,15 @@ function getChildrenFormData() {
     }
 
     return childrenList.map(child => ({
-        personal_info_id: id,  
+        personal_info_id: personalInfoId,  
         name: child.name,
         birthdate: child.birthdate
+        
     }));
 }
 
-function getEducationalBackground() {
-    if (!id) {  
+function getEducationalBackground(personalInfoId) {
+    if (!personalInfoId) {  
         alert("Missing Personal Info ID. Please complete previous sections.");
         return null;
     }
@@ -64,7 +71,7 @@ function getEducationalBackground() {
     const educationEntries = document.querySelectorAll(".education-entry");
 
     educationEntries.forEach((entry, index) => {
-        let educationItem = { personal_info_id: id }; // Add personalInfoId
+        let educationItem = { personal_info_id: personalInfoId }; // Add personalInfoId
 
         entry.querySelectorAll("input").forEach(input => {
             educationItem[input.name] = input.value.trim();
@@ -80,8 +87,8 @@ function getEducationalBackground() {
     return educationData;
 }
 
-function getCivilServiceEligibility() {
-    if (!id) {  
+function getCivilServiceEligibility(personalInfoId) {
+    if (!personalInfoId) {  
         alert("Missing Personal Info ID. Please complete previous sections.");
         return null;
     }
@@ -91,14 +98,14 @@ function getCivilServiceEligibility() {
     }
     const processedData = civilServiceData.map(entry => ({
         ...entry,
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
 
     return processedData;
 }
 
-function getWorkExperience() {
-    if (!id) {  
+function getWorkExperience(personalInfoId) {
+    if (!personalInfoId) {  
         alert("Missing Personal Info ID. Please complete previous sections.");
         return null;
     }
@@ -108,13 +115,13 @@ function getWorkExperience() {
     }
     const processedData = workExperienceData.map(entry => ({
         ...entry,
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
     
     return processedData;
 }
-function getVoluntaryWork() {
-    if (!id) {  
+function getVoluntaryWork(personalInfoId) {
+    if (!personalInfoId) {  
         alert("Missing Personal Info ID. Please complete previous sections.");
         return null;
     }
@@ -124,13 +131,13 @@ function getVoluntaryWork() {
     }
     const processedData = voluntaryWorkData.map(entry => ({
         ...entry,
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
     
     return processedData;
 }
-function getLearning() {
-    if (!id) {  
+function getLearning(personalInfoId) {
+    if (!personalInfoId) {  
         alert("Missing Personal Info ID. Please complete previous sections.");
         return null;
     }
@@ -140,13 +147,13 @@ function getLearning() {
     }
     const processedData = learningDevelopmentData.map(entry => ({
         ...entry,
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
     
     return processedData;
 }
-function getHobbies() {
-    if (!id) {  
+function getHobbies(personalInfoId) {
+    if (!personalInfoId) {  
         alert("Missing Personal Info ID. Please complete previous sections.");
         return null;
     }
@@ -156,13 +163,13 @@ function getHobbies() {
     }
     const processedData = otherInformationData.specialSkills.map(entry => ({
         ...entry,
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
     
     return processedData;
 }
-function getRecognition () {
-    if (!id) {
+function getRecognition (personalInfoId) {
+    if (!personalInfoId) {
         alert("Missing Personal Info ID. Please complete previous sections");
     }
     if (otherInformationData.nonAcademicDistinctions.length === 0) {
@@ -171,12 +178,12 @@ function getRecognition () {
     }
     const processedData = otherInformationData.nonAcademicDistinctions.map(entry => ({
         ...entry, 
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
     return processedData;
 }
-function getMembership () {
-    if (!id) {
+function getMembership (personalInfoId) {
+    if (!personalInfoId) {
         alert("Missing Personal Info ID. Please complete previous sections");
     }
     if (otherInformationData.memberships.length === 0) {
@@ -185,11 +192,11 @@ function getMembership () {
     }
     const processedData = otherInformationData.memberships.map(entry => ({
         ...entry, 
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
     return processedData;
 }
-function getQuestion() {
+function getQuestion(personalInfoId) {
     let questions = [];
     let questionNumber = 1; 
 
@@ -240,7 +247,7 @@ function getQuestion() {
         //  **Prevent adding questions if only the text input or textarea is filled but no radio is selected**
         if (answer !== "N/A" || (questionNumber === 4 && (dateValue !== "N/A"))) {
             questions.push({
-                personal_info_id: id, 
+                personal_info_id: personalInfoId, 
                 question_code: questionNumber, 
                 answer: answer, 
                 details: details, 
@@ -257,8 +264,8 @@ function getQuestion() {
 
 
 
-function getReference() {
-    if (!id) {
+function getReference(personalInfoId) {
+    if (!personalInfoId) {
         alert("Missing Personal Info ID. Please complete previous sections");
     }
     if (references.length === 0) {
@@ -267,15 +274,16 @@ function getReference() {
     }
     const processedData = references.map(entry => ({
         ...entry, 
-        personal_info_id: id
+        personal_info_id: personalInfoId
     }));
     return processedData;
 }
 
 
 
-async function submitData(sectionId, apiEndpoint, dataFunction) {
-    const formData = dataFunction();
+async function submitData(sectionId, apiEndpoint, dataFunction, personalInfoId) {
+    
+    const formData = dataFunction(personalInfoId);
     console.log(formData);
     if (!formData) {
         alert(`Please fill in all required fields in the ${sectionId} section.`);
@@ -302,16 +310,14 @@ async function submitData(sectionId, apiEndpoint, dataFunction) {
         }
 
         if (!data.success) {
-            alert(`Error in ${sectionId}: ` + data.error);
-        } else {
-            alert(`${sectionId} submitted successfully!`);
-        }
+            swal.fire(`Error in ${sectionId}: ` + data.error);
+        } 
     } catch (error) {
         console.error(`Request failed for ${apiEndpoint}:`, error);
     }
 }
-async function submitAttachments(sectionId, apiEndpoint, dataFunction) {
-    const formData = dataFunction(); // This should return a FormData object
+async function submitAttachments(sectionId, apiEndpoint, dataFunction, personalInfoId) {
+    const formData = dataFunction(personalInfoId); // This should return a FormData object
 
     if (!formData) {
         alert(`No data found for ${sectionId}. Please try again.`);
@@ -346,26 +352,28 @@ async function submitAttachments(sectionId, apiEndpoint, dataFunction) {
         if (!data.success) {
             alert(` Error in ${sectionId}: ${data.error}`);
         } else {
-            alert(` ${sectionId} submitted successfully!`);
+            
             personalInfoId = data.id; // Store returned ID for future use
             console.log(` Updated personalInfoId:`, personalInfoId);
         }
     } catch (error) {
         console.error(` Request failed for ${apiEndpoint}:`, error);
-        alert(` Network error. Please try again later.`);
+       
     }
 }
 
 
-async function submitPersonalInfo(dataFunction) {
+async function submitPersonalInfo(dataFunction, existingInfo = null) {
     const formData = dataFunction();
-    const { mode, document_id, pds_name, user_id } = getModeFromURL();
+    const urlParams = getModeFromURL();
 
-    if (mode === "create") {
-        formData.pds_name = pds_name; //for 
-        formData.user_id = user_id;
+    if (urlParams.mode === "create") {
+        formData.pds_name = urlParams.pds_name;
+        formData.user_id = urlParams.user_id;
     } else {
-        formData.document_id = document_id; // This is the personalInfoId used to update
+        // Use fallback from global existingInfo
+        formData.pds_name = existingInfo.pds_name;
+        formData.user_id = existingInfo.user_id;
     }
     try {
         let response = await fetch("/pds/view_model/pds_main/personalInfo.php", { 
@@ -380,9 +388,19 @@ async function submitPersonalInfo(dataFunction) {
             throw new Error(`Failed to submit personal info: ${response.statusText}`);
         }
 
-        let data = await response.json();
+        let text = await response.text();  // get raw response
+        console.log("Raw Server Response:", text);
+
+        let data;
+        try {
+            data = JSON.parse(text);
+        } catch (jsonError) {
+            console.error("Failed to parse JSON:", jsonError);
+            console.error("Response was:", text);
+            throw new Error("Invalid JSON returned from server");
+        }
         console.log("Response Data:", data);
-        id = data.id;
+        let id = data.id;
         console.log("Response Data:", id);
 
         if (!data || !data.id) {
@@ -392,136 +410,161 @@ async function submitPersonalInfo(dataFunction) {
         return id;
 
     } catch (error) {
+        
         console.error("Error in submitPersonalInfo:", error);
         return null; // Ensure it doesn't break execution
     }
 }
 
 
-function submitFamilyBackground() {
-    submitData("Family Background", "/pds/view_model/pds_main/familybackground.php", getFamilyBackgroundData);
+function submitFamilyBackground(personalInfoId) {
+    submitData("Family Background", "/pds/view_model/pds_main/familybackground.php", getFamilyBackgroundData, personalInfoId);
 }
 
-function submitChildrenList() {
-    const childrenData = getChildrenFormData();
+function submitChildrenList(personalInfoId) {
+    const childrenData = getChildrenFormData(personalInfoId);
 
     if (!childrenData || childrenData.length === 0) {
         console.log("Skipping children submission: No children data.");
         return;
     }
     
-    submitData("Children Section", "/pds/view_model/pds_main/children.php", () => ({ children: childrenData }));
+    submitData("Children Section", "/pds/view_model/pds_main/children.php", () => ({ children: childrenData }), personalInfoId);
 }
 
-function submitEducationalBackground() {
-    const educationData = getEducationalBackground();
+function submitEducationalBackground(personalInfoId) {
+    const educationData = getEducationalBackground(personalInfoId);
     if (!educationData || educationData.length === 0) {
-        console.log("Skipping education submission: No education data.");
+        swal.alert("Skipping education submission: No education data.");
         return;
     }
 
-    submitData("Educational Backgrounnd", "/pds/view_model/pds_main/education.php", () => ({ education: educationData }));
+    submitData("Educational Backgrounnd", "/pds/view_model/pds_main/education.php", () => ({ education: educationData }), personalInfoId);
 }
-function submitCivilServiceEligibility() {
-    const civilServiceDataProcessed = getCivilServiceEligibility();
+function submitCivilServiceEligibility(personalInfoId) {
+    const civilServiceDataProcessed = getCivilServiceEligibility(personalInfoId);
     
     if (!civilServiceDataProcessed) return; // Skip submission if no data
 
-    submitData("Civil Service Eligibility", "/pds/view_model/pds_main/civil_service.php", () => ({ civil_service: civilServiceDataProcessed }));
+    submitData("Civil Service Eligibility", "/pds/view_model/pds_main/civil_service.php", () => ({ civil_service: civilServiceDataProcessed }), personalInfoId);
 }
-function submitWorkExperience() {
-    const workExperienceDataProcessed = getWorkExperience();
+function submitWorkExperience(personalInfoId) {
+    const workExperienceDataProcessed = getWorkExperience(personalInfoId);
     
     if (!workExperienceDataProcessed) return; // Skip submission if no data
 
-    submitData("Work Experience", "/pds/view_model/pds_main/work_experience.php", () => ({ work_experience: workExperienceDataProcessed }));
+    submitData("Work Experience", "/pds/view_model/pds_main/work_experience.php", () => ({ work_experience: workExperienceDataProcessed }), personalInfoId);
 }
-function submitVoluntaryWorkData() {
-    const voluntaryWorkDataProcessed = getVoluntaryWork();
+function submitVoluntaryWorkData(personalInfoId) {
+    const voluntaryWorkDataProcessed = getVoluntaryWork(personalInfoId);
     
     if (!voluntaryWorkDataProcessed) return; // Skip submission if no data
 
-    submitData("Voluntary Work", "/pds/view_model/pds_main/voluntary_work.php", () => ({ voluntary_work: voluntaryWorkDataProcessed }));
+    submitData("Voluntary Work", "/pds/view_model/pds_main/voluntary_work.php", () => ({ voluntary_work: voluntaryWorkDataProcessed }), personalInfoId);
 }
-function submitLearningData() {
-    const learningDataProcessed = getLearning();
+function submitLearningData(personalInfoId) {
+    const learningDataProcessed = getLearning(personalInfoId);
     if (!learningDataProcessed) return; // Skip submission if no data
-    submitData("Learning", "/pds/view_model/pds_main/learning.php", () => ({ learning: learningDataProcessed}));
+    submitData("Learning", "/pds/view_model/pds_main/learning.php", () => ({ learning: learningDataProcessed}), personalInfoId);
 
 }
-function submitHobbiesData(){
-    const hobbiesDataProcessed = getHobbies();
+function submitHobbiesData(personalInfoId){
+    const hobbiesDataProcessed = getHobbies(personalInfoId);
     if (!hobbiesDataProcessed) return; // Skip submission if no data
-    submitData("Hobby", "/pds/view_model/pds_main/hobbies.php", () => ({ hobbies: hobbiesDataProcessed}));
+    submitData("Hobby", "/pds/view_model/pds_main/hobbies.php", () => ({ hobbies: hobbiesDataProcessed}), personalInfoId);
 
 }
 
-function submitRecognitionData() {
-    const recognitionDataProcessed = getRecognition();
+function submitRecognitionData(personalInfoId) {
+    const recognitionDataProcessed = getRecognition(personalInfoId);
     if (!recognitionDataProcessed) return; // Skip submission if no data
-    submitData("Recognition", "/pds/view_model/pds_main/recognition.php", () => ({ recognition: recognitionDataProcessed}));
+    submitData("Recognition", "/pds/view_model/pds_main/recognition.php", () => ({ recognition: recognitionDataProcessed}), personalInfoId);
 }
 
-function submitMembershipData() {
-    const membershipDataProcessed = getMembership();
+function submitMembershipData(personalInfoId) {
+    const membershipDataProcessed = getMembership(personalInfoId);
     if (!membershipDataProcessed) return; // Skip submission if no data
-    submitData("Membership", "/pds/view_model/pds_main/membership.php", () => ({ membership: membershipDataProcessed}));
+    submitData("Membership", "/pds/view_model/pds_main/membership.php", () => ({ membership: membershipDataProcessed}), personalInfoId);
 }
-function submitReferenceData() {
-    const referenceDataProcessed = getReference();
+function submitReferenceData(personalInfoId) {
+    const referenceDataProcessed = getReference(personalInfoId);
     if (!referenceDataProcessed) return; // Skip submission if no data
-    submitData("References", "/pds/view_model/pds_main/references.php", () => ({ reference: referenceDataProcessed}));
+    submitData("References", "/pds/view_model/pds_main/references.php", () => ({ reference: referenceDataProcessed}), personalInfoId);
 }
-function submitQuestionData() {
-    const questionDataProcessed = getQuestion();
+function submitQuestionData(personalInfoId) {
+    const questionDataProcessed = getQuestion(personalInfoId);
     if (!questionDataProcessed) return;
-    submitData("Questions", "/pds/view_model/pds_main/questions.php", () => ({ question: questionDataProcessed}));
+    submitData("Questions", "/pds/view_model/pds_main/questions.php", () => ({ question: questionDataProcessed}), personalInfoId);
 }
-function submitAttachmentsData() {
+function submitAttachmentsData(personalInfoId) {
     const collectUserInputsProcessed = collectUserInputs;
     if (!collectUserInputsProcessed) return;
-    submitAttachments("Attachments", "/pds/view_model/pds_main/attachments.php", collectUserInputsProcessed);
+    submitAttachments("Attachments", "/pds/view_model/pds_main/attachments.php", collectUserInputsProcessed, personalInfoId);
 }
 
 
-async function processAndSubmitData() {
+async function processAndSubmitData(existingInfo = null) {
     try {
-        await submitPersonalInfo(getPersonalInfoData);
-        console.log("Personal Info ID:", id); 
+        let personalInfoId;
 
-        if (!id) {
+        if (existingInfo) {
+            const formData = {
+                action: "delete",
+                id: parseInt(existingInfo.document_id)
+            };
+
+            let response = await fetch("/pds/view_model/pds_landing/delete.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            let data = await response.json();
+
+            if (data.success) {
+                personalInfoId = await submitPersonalInfo(getPersonalInfoData, existingInfo);
+            }
+        } else {
+            // In create mode, assume getPersonalInfoData will generate the ID
+            personalInfoId = await submitPersonalInfo(getPersonalInfoData);
+        }
+
+        console.log("Personal Info ID:", personalInfoId);
+
+        if (!personalInfoId) {
             console.error("Personal info submission failed. Stopping execution.");
             return;
         }
 
+        // Proceed with inserting new data
+        await submitFamilyBackground(personalInfoId);
+        await submitChildrenList(personalInfoId);
+        await submitEducationalBackground(personalInfoId);
+        await submitCivilServiceEligibility(personalInfoId);
+        await submitWorkExperience(personalInfoId);
+        await submitVoluntaryWorkData(personalInfoId);
+        await submitLearningData(personalInfoId);
+        await submitHobbiesData(personalInfoId);
+        await submitRecognitionData(personalInfoId);
+        await submitMembershipData(personalInfoId);
+        await submitQuestionData(personalInfoId);
+        await submitReferenceData(personalInfoId);
+        await submitAttachmentsData(personalInfoId);
 
-        await submitFamilyBackground();
-        await submitChildrenList();
-        await submitEducationalBackground();
-        await submitCivilServiceEligibility();
-        await submitWorkExperience();
-        await submitVoluntaryWorkData();
-        await submitLearningData();
-        await submitHobbiesData();
-        await submitRecognitionData();
-        await submitMembershipData();
-        await submitQuestionData();
-        await submitReferenceData();
-        await submitAttachmentsData();
+        swal.fire("All data submitted successfully.");
+        if (existingInfo) {
+            window.location.href = `/pds/view/pds_landing/`; // Edit mode: go to landing
+        } else {
+            window.location.href = `/pds/view/pds_preview/index.php?id=${personalInfoId}`; // Create mode: go to preview
+        }
 
-        console.log("All data submitted successfully.");
-
-        window.location.href = `/pds/view/pds_landing/`; //change if preview or table
-
-        
     } catch (error) {
-        //delete data when error 
-        //add preview pdf that fetch data
+        // Ensure personalInfoId is defined before deletion
+        if (typeof personalInfoId !== "undefined") {
+            await fetch(`delete_data.php?id=${personalInfoId}`, { method: "DELETE" });
+        }
 
-        await fetch(`delete_data.php?id=${id}`, { method: "DELETE" });
-        alert("An error occurred. Your data has been removed. Please try again.");
+        swal.fire("An error occurred. Your data has been removed. Please try again.");
         console.error("Error during data submission:", error);
     }
 }
-
-

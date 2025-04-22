@@ -1478,8 +1478,8 @@
                             </label>
 
                             <div class="col-lg-5 col-md-6 col-sm-12 border rounded p-4">
-                                <div class="border mt-2 mb-3 p-3 d-flex align-items-center justify-content-center bg-light rounded" id="signaturePreview">
-                                    <p class="text-muted mb-0" id="signaturePlaceholder">Signature (Sign inside the box)</p>
+                                <div class="border mt-2 mb-3 p-3 d-flex align-items-center justify-content-center bg-light rounded" id="signatureOathPreview">
+                                    <p class="text-muted mb-0" id="signatureOathPlaceholder">Signature (Sign inside the box)</p>
                                 </div>
                                 <div class="form-group text-center mb-3">
                                     <label for="Sworn_Sig" class="form-label fw-bold">Upload Signature</label>
@@ -1504,7 +1504,7 @@
         <hr>
         <div class="col-sm-2 submit-button position-fixed bottom-0 end-0 p-3 d-none" id="floatingSubmit">
             <input type="hidden" name="info" id="info">
-            <input type="button" id="Submit" class="btn btn-dark btn-lg shadow-lg" value="Submit">
+            <input type="button" id="Submit" class="btn btn-dark btn-lg shadow-lg" value="Submit" Disabled>
         </div>
 
         

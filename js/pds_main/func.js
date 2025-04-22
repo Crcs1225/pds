@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-function collectUserInputs() {
+function collectUserInputs(personalInfoId) {
     const section = document.getElementById("lastPartSection");
 
     if (!section) {
@@ -658,9 +658,9 @@ function collectUserInputs() {
     });
 
     //  Add user personalInfoId if available
-    if (typeof id !== "undefined" && id) {
-        formData.append("personalInfoId", id);
-        console.log(` Added personalInfoId: ${id}`);
+    if (typeof personalInfoId !== "undefined" && personalInfoId) {
+        formData.append("personalInfoId", personalInfoId);
+        console.log(` Added personalInfoId: ${personalInfoId}`);
     } else {
         console.warn(" Warning: personalInfoId is not set or undefined!");
     }
@@ -680,8 +680,13 @@ function collectUserInputs() {
 
 
 document.getElementById("Submit").addEventListener("click", function () {
-    processAndSubmitData();
-    
+
+    const { mode } = getModeFromURL();
+    if (mode === "edit") {
+        processAndSubmitData(existingInfo);  // Pass the loaded values
+    } else {
+        processAndSubmitData(); // Create mode
+    }
 });
 
 
@@ -704,17 +709,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (mode === "edit") {
         await fetchAndPrefillForm(document_id);
     }
+    // Enable button after info is ready
+    document.getElementById("Submit").disabled = false;
 });
-
 function removeRow(button) {
     button.closest("tr").remove();
 }
-
+let existingInfo = {};
 async function fetchAndPrefillForm(id) {
     try {
         const response = await fetch(`/pds/view_model/pds_main/getinfo.php?id=${id}`);
         const data = await response.json();
-
+        existingInfo = {
+            user_id: data.info.user_id,
+            pds_name: data.info.pds_name,
+            document_id: id
+        };
         console.log("Raw Data from PHP:", data); // Log the entire response
 
         if (data.success && data.info) {
@@ -783,11 +793,11 @@ async function fetchAndPrefillForm(id) {
                 document.querySelector('[name="Mother_Middlename"]').value = familyBackground.mother_middlename || '';
             }
             if (data.children && data.children.length > 0) {
-                const children = data.children;
+                childrenList = data.children;
                 const tableBody = document.getElementById("spouse-children");
                 tableBody.innerHTML = ""; // Clear existing rows if any
             
-                children.forEach((child, index) => {
+                childrenList.forEach((child) => {
                     const row = document.createElement("tr");
             
                     row.innerHTML = `
@@ -804,6 +814,7 @@ async function fetchAndPrefillForm(id) {
             
                     tableBody.appendChild(row);
                 });
+                
             }
             
 
@@ -858,7 +869,7 @@ async function fetchAndPrefillForm(id) {
 
             }
             if (data.civil_service_eligibility && data.civil_service_eligibility.length > 0) {
-                const civilServiceData = data.civil_service_eligibility;
+                civilServiceData = data.civil_service_eligibility;
                 const tableBody = document.getElementById("civilServiceTable");
                 const mobileList = document.getElementById("civilServiceList");
             
@@ -896,10 +907,11 @@ async function fetchAndPrefillForm(id) {
                     `;
                     mobileList.appendChild(card);
                 });
+                
             }
 
             if (data.work_experience && data.work_experience.length > 0){
-                const workExperienceData = data.work_experience;
+                workExperienceData = data.work_experience;
                 const tableBody = document.getElementById("workExperienceTable");
                 const mobileList = document.getElementById("workExperienceList");
 
@@ -940,10 +952,10 @@ async function fetchAndPrefillForm(id) {
 
                     mobileList.appendChild(card)
                 });
-
+               
             }
             if (data.voluntary_work && data.voluntary_work.length > 0){
-                const voluntaryWorkData = data.voluntary_work;
+                voluntaryWorkData = data.voluntary_work;
                 const tableBody = document.getElementById("voluntaryWorkTable");
                 const mobileList = document.getElementById("voluntaryWorkList");
 
@@ -959,7 +971,7 @@ async function fetchAndPrefillForm(id) {
                         <td>${record.work_to}</td>
                         <td>${record.number_of_hours}</td>
                         <td>${record.position_nature_of_work}</td>
-                        <td><button class="btn btn-danger btn-sm deleteWorkEntry" data-id="${record.id}">Delete</button></td>
+                        <td><button class="btn btn-danger btn-sm deleteVolEntry" data-id="${record.id}">Delete</button></td>
                     </tr>
                     `;
                     tableBody.appendChild(row);
@@ -980,17 +992,18 @@ async function fetchAndPrefillForm(id) {
 
                     mobileList.appendChild(card)
                 });
+                
 
             }
             if (data.learning_and_development && data.learning_and_development.length > 0){
-                const learningData = data.learning_and_development;
+                learningDevelopmentData = data.learning_and_development;
                 const tableBody = document.getElementById("learningDevelopmentTable");
                 const mobileList = document.getElementById("learningDevelopmentList");
 
                 tableBody.innerHTML = ""; // Clear existing rows
                 mobileList.innerHTML = ""; // Clear mobile view
 
-                learningData.forEach((record) => {
+                learningDevelopmentData.forEach((record) => {
                     const row = document.createElement("tr");
                     row.innerHTML = `
                     <tr data-id="${record.id}">
@@ -1021,56 +1034,75 @@ async function fetchAndPrefillForm(id) {
 
                     mobileList.appendChild(card)
                 });
+                
 
             }
             if (data.special_skills_hobbies && data.special_skills_hobbies.length > 0) {
-                const skillsData = data.special_skills_hobbies;
+                otherInformationData.specialSkills = data.special_skills_hobbies.map(skill => ({
+                    id: Date.now() + Math.floor(Math.random() * 1000),
+                    value: skill.skill_hobby
+                }));
+            
                 const list = document.getElementById("specialSkillsList");
-                skillsData.forEach((record) => {
+                list.innerHTML = ""; // Clear old content
+            
+                otherInformationData.specialSkills.forEach((item) => {
                     const listItem = document.createElement("li");
                     listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+                    listItem.dataset.id = item.id;
+            
                     listItem.innerHTML = `
-                        ${record.skill_hobby}
+                        ${item.value}
                         <button class="btn btn-danger btn-sm delete-btn">x</button>
                     `;
-
                     list.appendChild(listItem);
-
                 });
-
             }
+            
             if (data.non_academic_distinctions && data.non_academic_distinctions.length > 0) {
-                const distinctionsData = data.non_academic_distinctions;
+                otherInformationData.nonAcademicDistinctions = data.non_academic_distinctions.map(distinction => ({
+                    id: Date.now() + Math.floor(Math.random() * 1000),
+                    value: distinction.recognition
+                }));
+            
                 const list = document.getElementById("nonAcademicList");
-                distinctionsData.forEach((record) => {
+                list.innerHTML = "";
+            
+                otherInformationData.nonAcademicDistinctions.forEach((item) => {
                     const listItem = document.createElement("li");
                     listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+                    listItem.dataset.id = item.id;
+            
                     listItem.innerHTML = `
-                        ${record.recognition}
+                        ${item.value}
                         <button class="btn btn-danger btn-sm delete-btn">x</button>
                     `;
-
                     list.appendChild(listItem);
-
                 });
-
-            }   
+            }
+            
             if (data.memberships && data.memberships.length > 0) {
-                const membershipData = data.memberships;
+                otherInformationData.memberships = data.memberships.map(m => ({
+                    id: Date.now() + Math.floor(Math.random() * 1000),
+                    value: m.organization_name
+                }));
+            
                 const list = document.getElementById("membershipList");
-                membershipData.forEach((record) => {
+                list.innerHTML = "";
+            
+                otherInformationData.memberships.forEach((item) => {
                     const listItem = document.createElement("li");
                     listItem.className = "list-group-item d-flex justify-content-between align-items-center";
+                    listItem.dataset.id = item.id;
+            
                     listItem.innerHTML = `
-                        ${record.organization_name}
+                        ${item.value}
                         <button class="btn btn-danger btn-sm delete-btn">x</button>
                     `;
-
                     list.appendChild(listItem);
-
                 });
-
-            }   
+            }
+            
             if (data.survey_responses && data.survey_responses.length > 0) {
                 const responses = data.survey_responses;
                 if (responses[0]) {
@@ -1206,6 +1238,143 @@ async function fetchAndPrefillForm(id) {
                 }
 
             }
+            if (data.reference && data.reference.length > 0){
+                references = data.reference;
+                const tableBody = document.getElementById("referenceTableBody");
+                const mobileList = document.getElementById("referenceList");
+                
+                tableBody.innerHTML = ""; // Clear existing rows
+                mobileList.innerHTML = ""; // Clear mobile view
+
+                references.forEach((record) => {
+                    const row = document.createElement("tr");
+                    row.setAttribute("data-id", record.id);
+                    row.innerHTML = `
+                        <td>${record.name}</td>
+                        <td>${record.address}</td>
+                        <td>${record.telephone_no}</td>
+                        <td><button class="btn btn-danger float-end btn-sm deleteref"  data-id="${record.id}"><i class="bi bi-trash"></i></button></td>
+                    `;
+                    tableBody.appendChild(row);
+
+                    // Mobile-friendly card view
+                    const card = document.createElement("div");
+                    card.className = "card mb-2 p-2 border";
+                    card.innerHTML = `
+                    <div class="border p-3 mb-2" data-id="${record.id}">
+                        <p><strong>Name:</strong> ${record.name}</p>
+                        <p><strong>Address:</strong> ${record.address}</p>
+                        <p><strong>Phone:</strong> ${record.telephone_no}</p>
+                        <button class="btn btn-danger btn-sm float-end  deleteref"  data-id="${record.id}"><i class="bi bi-trash"></i></button>
+                    </div>`;
+
+                    mobileList.appendChild(card);
+                });
+                document.addEventListener('click', function (e) {
+                    if (e.target && e.target.classList.contains('deleteref')) {
+                        const idToDelete = e.target.getAttribute('data-id');
+
+                        references = references.filter(item => item.id != idToDelete);
+                        
+                                // Remove from table
+                        const row = document.querySelector(`tr[data-id="${idToDelete}"]`);
+                        if (row) row.remove();
+
+                        // Remove from card view
+                        const card = document.querySelector(`div[data-id="${idToDelete}"]`);
+                        if (card) card.remove();
+                        // Remove from the array
+                        
+                
+                    }
+                });
+                
+
+            }
+            if (data.attachment && data.attachment.length > 0){
+                const attachmentData = data.attachment[0];
+
+                document.querySelector('[name="GIID"]').value = attachmentData.government_issued_id || '';
+                document.querySelector('[name="ID_L_PNO"]').value = attachmentData.id_license_passport_no|| '';
+                document.querySelector('[name="D_PoI"]').value = attachmentData.date_place_of_issuance || '';
+                document.querySelector('[name="date_Accomplish"]').value = attachmentData.date_accomplished || '';
+                document.querySelector('[name="dateSworn"]').value = attachmentData.subscribed_and_sworn_date || '';
+                document.querySelector('[name="personAdminOath"]').value = attachmentData.person_administering_oath|| '';
+
+                const imagePreview = document.getElementById("imagePreview");
+                const placeholderText = document.getElementById("placeholderText");
+
+                if (attachmentData.id_picture && imagePreview) {
+                    // Clear the container
+                    imagePreview.innerHTML = '';
+                
+                    // Create the image
+                    const img = document.createElement("img");
+                    img.src = `${window.location.origin}/pds/view_model/pds_main/${attachmentData.id_picture}`; // e.g. "/uploads/id_picture.jpg"
+                    img.alt = "ID Picture";
+                    img.className = "img-fluid rounded"; // Customize the class as needed
+                    img.style.maxHeight = "250px"; // Optional styling
+                    img.style.maxWidth = "200px";
+                
+                    // Append to preview container
+                    imagePreview.appendChild(img);
+                }
+                if (!attachmentData.id_picture) {
+                    placeholderText.style.display = "block";
+                } else {
+                    placeholderText.style.display = "none";
+                }
+
+                const sigPreview = document.getElementById("signaturePreview");
+                const sigText = document.getElementById("signaturePlaceholder");
+
+                if (attachmentData.person_signature && sigPreview) {
+                    // Clear the container
+                    sigPreview.innerHTML = '';
+                
+                    // Create the image
+                    const img = document.createElement("img");
+                    img.src = `${window.location.origin}/pds/view_model/pds_main/${attachmentData.person_signature}`; // e.g. "/uploads/id_picture.jpg"
+                    img.alt = "ID Picture";
+                    img.className = "img-fluid rounded"; // Customize the class as needed
+                    img.style.maxHeight = "250px"; // Optional styling
+                    img.style.maxWidth = "200px";
+                
+                    // Append to preview container
+                    sigPreview.appendChild(img);
+                }
+                if (!attachmentData.person_signature) {
+                    sigText.style.display = "block";
+                } else {
+                    sigText.style.display = "none";
+                }
+                const sigoathPreview = document.getElementById("signatureOathPreview");
+                const sigOathText = document.getElementById("signatureOathPlaceholder");
+
+                if (attachmentData.signature_of_person_administering_oath && sigoathPreview) {
+                    // Clear the container
+                    sigoathPreview.innerHTML = '';
+                
+                    // Create the image
+                    const img = document.createElement("img");
+                    img.src = `${window.location.origin}/pds/view_model/pds_main/${attachmentData.signature_of_person_administering_oath}`; // e.g. "/uploads/id_picture.jpg"
+                    img.alt = "ID Picture";
+                    img.className = "img-fluid rounded"; // Customize the class as needed
+                    img.style.maxHeight = "250px"; // Optional styling
+                    img.style.maxWidth = "200px";
+                
+                    // Append to preview container
+                    sigoathPreview.appendChild(img);
+                }
+                if (!attachmentData.signature_of_person_administering_oath) {
+                    sigOathText.style.display = "block";
+                } else {
+                    sigOathText.style.display = "none";
+                }
+
+
+
+            }
 
         } else {
             Swal.fire("Failed to load existing data for editing.");
@@ -1218,3 +1387,65 @@ async function fetchAndPrefillForm(id) {
         });
     }
 }
+document.addEventListener('click', function (e) {
+    // Civil Service Delete
+    if (e.target && e.target.classList.contains('deleteEntry')) {
+        const idToDelete = e.target.getAttribute('data-id');
+
+        // Remove from civilServiceData array
+        civilServiceData = civilServiceData.filter(item => item.id !== idToDelete);
+
+        // Remove row
+        const row = document.querySelector(`#civilServiceTable tr[data-id="${idToDelete}"]`);
+        if (row) row.remove();
+
+        // Remove card
+        const card = document.querySelector(`#civilServiceList div[data-id="${idToDelete}"]`);
+        if (card) card.remove();
+    }
+
+    // Work Experience Delete
+    if (e.target && e.target.classList.contains('deleteWorkEntry')) {
+        const idToDelete = e.target.getAttribute('data-id');
+
+        // Remove from workExperienceData array
+        workExperienceData = workExperienceData.filter(item => item.id !== idToDelete);
+
+        // Remove row
+        const row = document.querySelector(`#workExperienceTable tr[data-id="${idToDelete}"]`);
+        if (row) row.remove();
+
+        // Remove card
+        const card = document.querySelector(`#workExperienceList div[data-id="${idToDelete}"]`);
+        if (card) card.remove();
+    }
+    if (e.target && e.target.classList.contains('deleteVolEntry')) {
+        const idToDelete = e.target.getAttribute('data-id');
+        
+                // Remove from table
+        const row = document.querySelector(`tr[data-id="${idToDelete}"]`);
+        if (row) row.remove();
+
+        // Remove from card view
+        const card = document.querySelector(`div[data-id="${idToDelete}"]`);
+        if (card) card.remove();
+        // Remove from the array
+        voluntaryWorkData = voluntaryWorkData.filter(item => item.id !== idToDelete);
+
+    }
+    if (e.target && e.target.classList.contains('deleteLdEntry')) {
+        const idToDelete = e.target.getAttribute('data-id');
+        
+                // Remove from table
+        const row = document.querySelector(`tr[data-id="${idToDelete}"]`);
+        if (row) row.remove();
+
+        // Remove from card view
+        const card = document.querySelector(`div[data-id="${idToDelete}"]`);
+        if (card) card.remove();
+        // Remove from the array
+        learningDevelopmentData = learningDevelopmentData.filter(item => item.id !== idToDelete);
+
+    }
+
+});

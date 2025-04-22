@@ -79,10 +79,10 @@ $signaturePath = uploadFile("C4_Signature", $signatureDir, $personalInfoId);
 $swornPath = uploadFile("Sworn_Sig", $swornDir, $personalInfoId);
 
 // If any file upload failed, return an error **before** inserting into the database
-if (!$idPath || !$signaturePath || !$swornPath) {
-    file_put_contents("debug_log.txt", " One or more file uploads failed. Aborting database insert.\n", FILE_APPEND);
-    die(json_encode(["success" => false, "error" => "File upload failed. Please try again."]));
-}
+if (!$idPath) file_put_contents("debug_log.txt", " ⚠️ ID Picture not uploaded.\n", FILE_APPEND);
+if (!$signaturePath) file_put_contents("debug_log.txt", " ⚠️ Signature not uploaded.\n", FILE_APPEND);
+if (!$swornPath) file_put_contents("debug_log.txt", " ⚠️ Sworn Signature not uploaded.\n", FILE_APPEND);
+
 
 // Get text inputs
 $giid = $_POST["GIID"] ?? "N/A";

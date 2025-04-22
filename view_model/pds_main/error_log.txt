@@ -5,3 +5,31 @@ Stack trace:
   thrown in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 109
 Raw input:
 
+[21-Apr-2025 10:37:41 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 48
+[21-Apr-2025 10:37:41 Europe/Berlin] PHP Warning:  Undefined array key "pds_name" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 50
+[21-Apr-2025 10:37:41 Europe/Berlin] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 51
+[21-Apr-2025 10:37:41 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'pds_name' cannot be null in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php:119
+Stack trace:
+#0 C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php(119): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 119
+[21-Apr-2025 10:39:27 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 48
+[21-Apr-2025 10:39:27 Europe/Berlin] PHP Warning:  Undefined array key "pds_name" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 50
+[21-Apr-2025 10:39:27 Europe/Berlin] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 51
+[21-Apr-2025 10:39:27 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'pds_name' cannot be null in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php:119
+Stack trace:
+#0 C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php(119): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 119
+[21-Apr-2025 10:46:23 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 48
+[21-Apr-2025 10:46:23 Europe/Berlin] PHP Warning:  Undefined array key "pds_name" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 50
+[21-Apr-2025 10:46:23 Europe/Berlin] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 51
+[21-Apr-2025 10:46:25 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'pds_name' cannot be null in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php:119
+Stack trace:
+#0 C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php(119): mysqli_stmt->execute()
+#1 {main}
+  thrown in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 119
+[22-Apr-2025 02:04:13 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 48
+[22-Apr-2025 02:05:18 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 48
+[22-Apr-2025 02:05:30 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 48
+[22-Apr-2025 02:05:36 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\pds\view_model\pds_main\personalInfo.php on line 48
