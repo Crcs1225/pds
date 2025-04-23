@@ -1415,6 +1415,7 @@
                                     </div>
                                     <label for="C4_Picture" class="form-label mt-2">Upload ID Picture</label>
                                     <input type="file" class="form-control" id="C4_Picture" name="C4_Picture" accept="image/*" title="Choose an ID picture">
+                                    <input type="hidden" name="existing_C4_Picture" id="existing_C4_Picture" value="">
                                 </div>
                             </div>
                         </div>
@@ -1461,6 +1462,7 @@
                                 <div class="form-group text-center mb-3">
                                     <label for="C4_Signature" class="form-label fw-bold">Upload Signature</label>
                                     <input type="file" class="form-control" id="C4_Signature" name="C4_Signature" accept="image/*" title="Upload a signature">
+                                    <input type="hidden" name="existing_C4_Signature" id="existing_C4_Signature" value=" ">
                                 </div>
                                 <div class="form-group text-center">
                                     <label for="C4_Date" class="form-label fw-bold">Date Accomplished</label>
@@ -1484,6 +1486,7 @@
                                 <div class="form-group text-center mb-3">
                                     <label for="Sworn_Sig" class="form-label fw-bold">Upload Signature</label>
                                     <input type="file" class="form-control" id="Sworn_Sig" name="Sworn_Sig" accept="image/*" title="Upload a signature">
+                                    <input type="hidden" name="existing_Sworn_Sig" id="existing_Sworn_Sig" value="">
                                 </div>
                                 <div class="form-group text-center">
                                     <label for="personAdminOath" class="form-label fw-bold">Person Administering Oath</label>

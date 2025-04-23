@@ -639,21 +639,24 @@ function collectUserInputs(personalInfoId) {
     const formData = new FormData();
 
     section.querySelectorAll("input, textarea, select").forEach(field => {
-        if (!field.name) {
-            console.warn(` Skipping field without a name attribute:`, field);
-            return;
-        }
-
+        if (!field.name) return;
+    
         if (field.type === "file") {
             if (field.files.length > 0) {
-                formData.append(field.name, field.files[0]); 
-                console.log(` File Input Added: ${field.name} -> ${field.files[0].name}`);
+                // New file selected
+                formData.append(field.name, field.files[0]);
             } else {
-                console.warn(` No file selected for ${field.name}`);
+                // No new file selected, use existing path
+                const existingField = document.getElementById(`existing_${field.name}`);
+                if (existingField && existingField.value) {
+                    formData.append(field.name, existingField.value);
+                    console.log(`Reusing existing path for ${field.name}: ${existingField.value}`);
+                } else {
+                    console.warn(`No file or existing path for ${field.name}`);
+                }
             }
         } else {
-            formData.append(field.name, field.value.trim()); 
-            console.log(` Text Input Added: ${field.name} -> "${field.value.trim()}"`);
+            formData.append(field.name, field.value.trim());
         }
     });
 
@@ -664,6 +667,7 @@ function collectUserInputs(personalInfoId) {
     } else {
         console.warn(" Warning: personalInfoId is not set or undefined!");
     }
+
 
     console.log(" FormData Contents:");
     for (let pair of formData.entries()) {
@@ -1300,6 +1304,22 @@ async function fetchAndPrefillForm(id) {
                 document.querySelector('[name="date_Accomplish"]').value = attachmentData.date_accomplished || '';
                 document.querySelector('[name="dateSworn"]').value = attachmentData.subscribed_and_sworn_date || '';
                 document.querySelector('[name="personAdminOath"]').value = attachmentData.person_administering_oath|| '';
+                
+                const existingIdPicture = document.getElementById('existing_C4_Picture');
+                if (existingIdPicture) {
+                    existingIdPicture.value = attachmentData.id_picture || '';
+                }
+
+                const existingPersonSignature = document.getElementById('existing_C4_Signature');
+                if (existingPersonSignature) {
+                    existingPersonSignature.value = attachmentData.person_signature || '';
+                }
+
+                const existingAdminOathSig = document.getElementById('existing_Sworn_Sig');
+                if (existingAdminOathSig) {
+                    existingAdminOathSig.value = attachmentData.signature_of_person_administering_oath || '';
+                }
+
 
                 const imagePreview = document.getElementById("imagePreview");
                 const placeholderText = document.getElementById("placeholderText");
@@ -1371,7 +1391,7 @@ async function fetchAndPrefillForm(id) {
                 } else {
                     sigOathText.style.display = "none";
                 }
-
+                
 
 
             }

@@ -88,7 +88,7 @@ document.querySelectorAll('.btn-primary').forEach(button => {
     button.addEventListener('click', function () {
         const row = this.closest('tr');
         const pdsId = row.getAttribute('data-id');
-        window.location.href = `/pds/view/pds_preview/index.php?id=${pdsId}`;
+        window.location.href = `/pds/view/pds_print/index.php?id=${pdsId}`;
     });
 });
 document.querySelectorAll('.btn-warning').forEach(button => {
