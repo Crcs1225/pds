@@ -23,7 +23,7 @@
         
             if ($action === 'confirm') {
                 // Perform confirm action (update database)
-                $stmt = $conn->prepare("UPDATE personal_information SET status = 'confirmed' WHERE id = ?");
+                $stmt = $conn->prepare("UPDATE personal_information SET status = 'inactive' WHERE id = ?");
                 $stmt->bind_param("i", $id);
                 $stmt->execute();
         

@@ -1,0 +1,788 @@
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2020-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"41343-6734","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"","MobileNumber":"724.365.7744 x7946","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Other/s","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newpds","user_id":"1"}
+Raw input:
+{"personal_info_id":88,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"question":[{"personal_info_id":88,"question_code":1,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":2,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":3,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":4,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":5,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":6,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":7,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":8,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":9,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":10,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":11,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":12,"answer":"No","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [C4_Signature] =>  
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 88
+)
+
+ 📄 Final ID Path: ❌ NONE
+ ✍️ Final Signature Path: ❌ NONE
+ 📜 Final Sworn Path: ❌ NONE
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 88
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => 
+    [8] => 
+    [9] => 
+)
+
+ ✅ Database insert successful. Insert ID: 46
+Raw input:
+{"education":[{"personal_info_id":88,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":88,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":88,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":88,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":88,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"id":88,"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2020-12-12","PlaceOfBirth":"Buer","Height":"157.00","Weight":"60.00","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"41343-6734","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"","MobileNumber":"724.365.7744 x7","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"","Citizenship1":"Filipino","Citizenship2":"By Birth","pds_name":"newpds","user_id":1}
+Raw input:
+{"personal_info_id":88,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"N/A","Spouse_BusinessAddress":"N/A","Spouse_TelephoneNumber":"N/A","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"N/A","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":88,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":88,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":88,"vocName":"","vocCourse":"","vocFrom":"0000","vocTo":"0000","vocUnits":"","vocYrGrad":"0000","vocHonors":"","level":"Vocational"},{"personal_info_id":88,"colName":"Province State University","colCourse":"","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":88,"gradName":"","gradCourse":"","gradFrom":"0000","gradTo":"0000","gradUnits":"","gradYrGrad":"0000","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":88,"question_code":1,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":2,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":3,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":4,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":5,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":6,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":7,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":8,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":9,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":10,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":11,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":12,"answer":"No","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 88
+)
+
+ 📄 Final ID Path: ❌ NONE
+ ✍️ Final Signature Path: ❌ NONE
+ 📜 Final Sworn Path: ❌ NONE
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 88
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => 
+    [8] => 
+    [9] => 
+)
+
+ ✅ Database insert successful. Insert ID: 47
+Raw input:
+{"id":88,"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2020-12-12","PlaceOfBirth":"Buer","Height":"157.00","Weight":"60.00","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"41343-6734","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"","MobileNumber":"724.365.7744 x7","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"","Citizenship1":"Filipino","Citizenship2":"By Birth","pds_name":"newpds","user_id":1}
+Raw input:
+{"personal_info_id":88,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"N/A","Spouse_BusinessAddress":"N/A","Spouse_TelephoneNumber":"N/A","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"N/A","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":88,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":88,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":88,"vocName":"","vocCourse":"","vocFrom":"0000","vocTo":"0000","vocUnits":"","vocYrGrad":"0000","vocHonors":"","level":"Vocational"},{"personal_info_id":88,"colName":"Province State University","colCourse":"","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":88,"gradName":"","gradCourse":"","gradFrom":"0000","gradTo":"0000","gradUnits":"","gradYrGrad":"0000","gradHonors":"","level":"Graduate Studies"}]}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => jay.png
+            [full_path] => jay.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpCFC5.tmp
+            [error] => 0
+            [size] => 58353
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpCFD6.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 88
+)
+
+Raw input:
+{"question":[{"personal_info_id":88,"question_code":1,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":2,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":3,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":4,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":5,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":6,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":7,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":8,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":9,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":10,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":11,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":12,"answer":"No","details":"N/A","date_filed":"N/A"}]}
+ 📄 Final ID Path: upload/id/user88_681187ce2cc1d.png
+ ✍️ Final Signature Path: upload/signature/user88_681187ce2ce93.png
+ 📜 Final Sworn Path: ❌ NONE
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 88
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user88_681187ce2ce93.png
+    [8] => upload/id/user88_681187ce2cc1d.png
+    [9] => 
+)
+
+ ✅ Database insert successful. Insert ID: 48
+Raw input:
+{"id":88,"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2020-12-12","PlaceOfBirth":"Buer","Height":"157.00","Weight":"60.00","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"41343-6734","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"","MobileNumber":"724.365.7744 x7","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"","Citizenship1":"Filipino","Citizenship2":"By Birth","pds_name":"newpds","user_id":1}
+Raw input:
+{"personal_info_id":88,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"N/A","Spouse_BusinessAddress":"N/A","Spouse_TelephoneNumber":"N/A","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"N/A","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":88,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":88,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":88,"vocName":"","vocCourse":"","vocFrom":"0000","vocTo":"0000","vocUnits":"","vocYrGrad":"0000","vocHonors":"","level":"Vocational"},{"personal_info_id":88,"colName":"Province State University","colCourse":"","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":88,"gradName":"","gradCourse":"","gradFrom":"0000","gradTo":"0000","gradUnits":"","gradYrGrad":"0000","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":88,"question_code":1,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":2,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":3,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":4,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":5,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":6,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":7,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":8,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":9,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":10,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":11,"answer":"No","details":"N/A","date_filed":"N/A"},{"personal_info_id":88,"question_code":12,"answer":"No","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php2430.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [C4_Picture] => upload/id/user88_681187ce2cc1d.png
+    [existing_C4_Picture] => upload/id/user88_681187ce2cc1d.png
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [C4_Signature] => upload/signature/user88_681187ce2ce93.png
+    [existing_C4_Signature] => upload/signature/user88_681187ce2ce93.png
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 88
+)
+
+ 📄 Final ID Path: upload/id/user88_681187ce2cc1d.png
+ ✍️ Final Signature Path: upload/signature/user88_681187ce2ce93.png
+ 📜 Final Sworn Path: upload/sworn/user88_681187e3bd2d9.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 88
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user88_681187ce2ce93.png
+    [8] => upload/id/user88_681187ce2cc1d.png
+    [9] => upload/sworn/user88_681187e3bd2d9.png
+)
+
+ ✅ Database insert successful. Insert ID: 49
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"","MobileNumber":"0973274724","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":89,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"children":[{"personal_info_id":89,"name":"new child","birthdate":"3332-04-12"}]}
+Raw input:
+{"education":[{"personal_info_id":89,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":89,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":89,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":89,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":89,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":89,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":89,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [C4_Signature] =>  
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 89
+)
+
+ 📄 Final ID Path: ❌ NONE
+ ✍️ Final Signature Path: ❌ NONE
+ 📜 Final Sworn Path: ❌ NONE
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 89
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => 
+    [8] => 
+    [9] => 
+)
+
+ ✅ Database insert successful. Insert ID: 50
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":90,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"question":[{"personal_info_id":90,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":90,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+Raw input:
+{"education":[{"personal_info_id":90,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":90,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":90,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":90,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":90,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => hero-image.png
+            [full_path] => hero-image.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC325.tmp
+            [error] => 0
+            [size] => 130358
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC326.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC327.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 90
+)
+
+ 📄 Final ID Path: upload/id/user90_681421b17ab48.png
+ ✍️ Final Signature Path: upload/signature/user90_681421b17b059.png
+ 📜 Final Sworn Path: upload/sworn/user90_681421b17b2bf.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 90
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user90_681421b17b059.png
+    [8] => upload/id/user90_681421b17ab48.png
+    [9] => upload/sworn/user90_681421b17b2bf.png
+)
+
+ ✅ Database insert successful. Insert ID: 51
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"1202-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":91,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":91,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":91,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":91,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":91,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":91,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":91,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":91,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => jp.png
+            [full_path] => jp.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php2014.tmp
+            [error] => 0
+            [size] => 66455
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php2015.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php2026.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 91
+)
+
+ 📄 Final ID Path: upload/id/user91_68142b83a6378.png
+ ✍️ Final Signature Path: upload/signature/user91_68142b83a7874.png
+ 📜 Final Sworn Path: upload/sworn/user91_68142b83a7c38.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 91
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user91_68142b83a7874.png
+    [8] => upload/id/user91_68142b83a6378.png
+    [9] => upload/sworn/user91_68142b83a7c38.png
+)
+
+ ✅ Database insert successful. Insert ID: 52
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":92,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":92,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":92,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":92,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":92,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":92,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":92,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":92,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => default-image.png
+            [full_path] => default-image.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php8CAD.tmp
+            [error] => 0
+            [size] => 32174
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php8CAE.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php8CBF.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 92
+)
+
+ 📄 Final ID Path: upload/id/user92_68142ef3723f5.png
+ ✍️ Final Signature Path: upload/signature/user92_68142ef372e98.png
+ 📜 Final Sworn Path: upload/sworn/user92_68142ef373472.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 92
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user92_68142ef372e98.png
+    [8] => upload/id/user92_68142ef3723f5.png
+    [9] => upload/sworn/user92_68142ef373472.png
+)
+
+ ✅ Database insert successful. Insert ID: 53
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":93,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => jp.png
+            [full_path] => jp.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php413C.tmp
+            [error] => 0
+            [size] => 66455
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php414D.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php414E.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 93
+)
+
+Raw input:
+{"education":[{"personal_info_id":93,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":93,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":93,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":93,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":93,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+ 📄 Final ID Path: upload/id/user93_68142fe6466b4.png
+ ✍️ Final Signature Path: upload/signature/user93_68142fe646d36.png
+ 📜 Final Sworn Path: upload/sworn/user93_68142fe646fa9.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+Raw input:
+{"question":[{"personal_info_id":93,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":93,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 93
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user93_68142fe646d36.png
+    [8] => upload/id/user93_68142fe6466b4.png
+    [9] => upload/sworn/user93_68142fe646fa9.png
+)
+
+ ✅ Database insert successful. Insert ID: 54
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":94,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"question":[{"personal_info_id":94,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":94,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => jay.png
+            [full_path] => jay.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php3C07.tmp
+            [error] => 0
+            [size] => 58353
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php3C18.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\php3C19.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 94
+)
+
+ 📄 Final ID Path: upload/id/user94_6814312c93a12.png
+ ✍️ Final Signature Path: upload/signature/user94_6814312c93c9f.png
+ 📜 Final Sworn Path: upload/sworn/user94_6814312c93f49.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 94
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user94_6814312c93c9f.png
+    [8] => upload/id/user94_6814312c93a12.png
+    [9] => upload/sworn/user94_6814312c93f49.png
+)
+
+Raw input:
+{"education":[{"personal_info_id":94,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":94,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":94,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":94,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":94,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+ ✅ Database insert successful. Insert ID: 55
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-02-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":95,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":95,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":95,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":95,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":95,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":95,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":95,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":95,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => hero-image.png
+            [full_path] => hero-image.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC585.tmp
+            [error] => 0
+            [size] => 130358
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC596.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpC597.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 95
+)
+
+ 📄 Final ID Path: upload/id/user95_6814329778a2a.png
+ ✍️ Final Signature Path: upload/signature/user95_681432977923b.png
+ 📜 Final Sworn Path: upload/sworn/user95_681432977a00d.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 95
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user95_681432977923b.png
+    [8] => upload/id/user95_6814329778a2a.png
+    [9] => upload/sworn/user95_681432977a00d.png
+)
+
+ ✅ Database insert successful. Insert ID: 56
+Raw input:
+{"cs_id_no":"","Surname":"Doe","Firstname":"John","NameExtension":"","MiddleName":"None","DateOfBirth":"2002-12-12","PlaceOfBirth":"Buer","Height":"157","Weight":"60","BloodType":"","GSIS":"","PagIBIG":"","PHILHEALTH":"","SSS":"","TIN":"","AgencyNo":"","dualCountry":"N/A","ResHouse_Block_LotNo":"724","ResStreet":"Mason Mission","ResSubdivision_Village":"Suite 744","ResBarangay":"Iowa","ResCity_Municipality":"Wuckertview","ResProvince":"Ohio","ResZipCode":"","PerHouse_Block_LotNo":"32967","PerStreet":"Orie Keys","PerSubdivision_Village":"Apt. 414","PerBarangay":"","PerCity_Municipality":"South Arelyborough","PerProvince":"Vermont","PerZipCode":"78695","TelephoneNumber":"09380013909","MobileNumber":"09380013909","EmailAdd":"Hilda_Pollich49@yahoo.com","Sex":"Male","CivilStatus":"Single","Citizenship1":"Filipino","Citizenship2":"by birth","pds_name":"newdata","user_id":"1"}
+Raw input:
+{"personal_info_id":96,"Spouse_Surname":"","Spouse_Firstname":"","Spouse_NameExtension":"","Spouse_Middlename":"","Spouse_Occupation":"","Spouse_Employer_Businessname":"","Spouse_BusinessAddress":"","Spouse_TelephoneNumber":"","Father_Surname":"Rath","Father_Firstname":"Aron","Father_NameExtension":"","Father_Middlename":"","Mother_MaidenName":"","Mother_Surname":"Grant","Mother_Firstname":"Maurine","Mother_Middlename":"","":"ADD"}
+Raw input:
+{"education":[{"personal_info_id":96,"elemName":"New Elementary","elemBasicEduc":"Basic Education","elemFrom":"2009","elemTo":"2015","elemUnits":"","elemYrGrad":"2015","elemHonors":"Honor","level":"Elementary"},{"personal_info_id":96,"secondName":"School Integrated School","secondBasicEduc":"Basic Education","secondFrom":"2015","secondTo":"2021","secondUnits":"","secondYrGrad":"2021","secondHonors":"Honor","level":"Secondary"},{"personal_info_id":96,"vocName":"","vocCourse":"","vocFrom":"","vocTo":"","vocUnits":"","vocYrGrad":"","vocHonors":"","level":"Vocational"},{"personal_info_id":96,"colName":"Province State University","colCourse":"BS Computer Science","colFrom":"2021","colTo":"2025","colUnits":"","colYrGrad":"2025","colHonors":"Distinction","level":"College"},{"personal_info_id":96,"gradName":"","gradCourse":"","gradFrom":"","gradTo":"","gradUnits":"","gradYrGrad":"","gradHonors":"","level":"Graduate Studies"}]}
+Raw input:
+{"question":[{"personal_info_id":96,"question_code":1,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":2,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":3,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":4,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":5,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":6,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":7,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":8,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":9,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":10,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":11,"answer":"Yes","details":"N/A","date_filed":"N/A"},{"personal_info_id":96,"question_code":12,"answer":"Yes","details":"N/A","date_filed":"N/A"}]}
+ 📂 Received Files: Array
+(
+    [C4_Picture] => Array
+        (
+            [name] => hero-image.png
+            [full_path] => hero-image.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpFECC.tmp
+            [error] => 0
+            [size] => 130358
+        )
+
+    [C4_Signature] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpFECD.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+    [Sworn_Sig] => Array
+        (
+            [name] => R.png
+            [full_path] => R.png
+            [type] => image/png
+            [tmp_name] => C:\xampp\tmp\phpFEDE.tmp
+            [error] => 0
+            [size] => 46733
+        )
+
+)
+
+ 📝 Received POST: Array
+(
+    [existing_C4_Picture] => 
+    [GIID] => 
+    [ID_L_PNO] => 
+    [D_PoI] => 
+    [existing_C4_Signature] => 
+    [date_Accomplish] => 
+    [dateSworn] => 
+    [existing_Sworn_Sig] => 
+    [personAdminOath] => 
+    [personalInfoId] => 96
+)
+
+ 📄 Final ID Path: upload/id/user96_681434f3e7241.png
+ ✍️ Final Signature Path: upload/signature/user96_681434f3e74cb.png
+ 📜 Final Sworn Path: upload/sworn/user96_681434f3e76d2.png
+ 🧾 GIID:  | ID_L_PNO:  | D_PoI:  | Date Accomplish:  | Sworn:  | Admin Oath: 
+ 🛠 Bind Types: isssssssss | Values: Array
+(
+    [0] => 96
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => 
+    [5] => 
+    [6] => 
+    [7] => upload/signature/user96_681434f3e74cb.png
+    [8] => upload/id/user96_681434f3e7241.png
+    [9] => upload/sworn/user96_681434f3e76d2.png
+)
+
+ ✅ Database insert successful. Insert ID: 57

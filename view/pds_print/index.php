@@ -790,9 +790,17 @@ try {
             }
 
             if ($attachment){
-                $pdf->Image($id_picture, 173, 210, 30, 30);
-                $pdf->Image($signature, 110, 265, 20, 20);
-                $pdf->Image($administering, 110, 310, 20, 20);
+
+                if ($attachment['id_picture'] != '') {
+                    $pdf->Image($id_picture, 173, 210, 30, 30);
+                }
+                if ($attachment['person_signature'] != '') {
+                    $pdf->Image($signature, 110, 265, 20, 20);
+                }
+                if ($attachment['signature_of_person_administering_oath'] != '') {
+                    $pdf->Image($administering, 110, 310, 20, 20);
+                }
+                
                 $pdf->SetXY(32, 275);
                 $pdf->Write(0, $attachment['government_issued_id']);
                 $pdf->SetXY(35, 282);

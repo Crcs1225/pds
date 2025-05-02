@@ -126,7 +126,6 @@ try {
     $stmtAttachment->execute();
     $attachmentResult = $stmtAttachment->get_result();
     $attachment = $attachmentResult->fetch_assoc();
-
     $basePath = $_SERVER['DOCUMENT_ROOT']; // gives you C:/xampp/htdocs
     $relativePath = '/pds/view_model/pds_main/'; // where the uploads actually live
     
@@ -134,7 +133,7 @@ try {
     $signature = $basePath . $relativePath . $attachment['person_signature'];
     $administering = $basePath . $relativePath . $attachment['signature_of_person_administering_oath'];
 
-
+    
     // Path to your PDF template
     $templatePath = 'pds.pdf';
 
@@ -232,31 +231,31 @@ try {
                 }
                 $pdf->SetXY(140, 87);
                 $pdf->Write(0, $personalInfo['country']);
-                $pdf->SetXY(130, 92);
+                $pdf->SetXY(125, 92);
                 $pdf->Write(0, $personalInfo['res_house_no']);
-                $pdf->SetXY(180, 92);
+                $pdf->SetXY(170, 92);
                 $pdf->Write(0, $personalInfo['res_street']);
-                $pdf->SetXY(130, 99);
+                $pdf->SetXY(125, 99);
                 $pdf->Write(0, $personalInfo['res_subdivision']);
-                $pdf->SetXY(180, 99);
+                $pdf->SetXY(170, 99);
                 $pdf->Write(0, $personalInfo['res_barangay']);
-                $pdf->SetXY(130, 107);
+                $pdf->SetXY(125, 107);
                 $pdf->Write(0, $personalInfo['res_city']);
-                $pdf->SetXY(180, 107);
+                $pdf->SetXY(170, 107);
                 $pdf->Write(0, $personalInfo['res_province']);
                 $pdf->SetXY(130, 115);
                 $pdf->Write(0, $personalInfo['res_zip']);
-                $pdf->SetXY(130, 121);
+                $pdf->SetXY(125, 121);
                 $pdf->Write(0, $personalInfo['perm_house_no']);
-                $pdf->SetXY(180, 121);
+                $pdf->SetXY(170, 121);
                 $pdf->Write(0, $personalInfo['perm_street']);
-                $pdf->SetXY(130, 128);
+                $pdf->SetXY(125, 128);
                 $pdf->Write(0, $personalInfo['perm_subdivision']);
-                $pdf->SetXY(180, 128);
+                $pdf->SetXY(170, 128);
                 $pdf->Write(0, $personalInfo['perm_barangay']);
-                $pdf->SetXY(130, 135);
+                $pdf->SetXY(125, 135);
                 $pdf->Write(0, $personalInfo['perm_city']);
-                $pdf->SetXY(180, 135);
+                $pdf->SetXY(170, 135);
                 $pdf->Write(0, $personalInfo['perm_province']);
                 $pdf->SetXY(130, 145);
                 $pdf->Write(0, $personalInfo['perm_zip']);
@@ -790,9 +789,18 @@ try {
             }
 
             if ($attachment){
-                $pdf->Image($id_picture, 173, 210, 30, 30);
-                $pdf->Image($signature, 110, 265, 20, 20);
-                $pdf->Image($administering, 110, 310, 20, 20);
+                if ($attachment['id_picture'] != '') {
+                    $pdf->Image($id_picture, 173, 210, 30, 30);
+                }
+                if ($attachment['person_signature'] != '') {
+                    $pdf->Image($signature, 110, 265, 20, 20);
+                }
+                if ($attachment['signature_of_person_administering_oath'] != '') {
+                    $pdf->Image($administering, 110, 310, 20, 20);
+                }
+                
+                
+                
                 $pdf->SetXY(32, 275);
                 $pdf->Write(0, $attachment['government_issued_id']);
                 $pdf->SetXY(35, 282);

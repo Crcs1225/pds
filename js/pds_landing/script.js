@@ -71,7 +71,6 @@ document.querySelectorAll('.active-checkbox').forEach(checkbox => {
 
                 // Check this one and highlight row
                 this.checked = true;
-                row.classList.add('table-success');
             } else {
                 Swal.fire('Error', result.message || 'Something went wrong.', 'error');
                 this.checked = false;
